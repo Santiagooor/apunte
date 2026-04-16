@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Adulto Anciano - Apunte de Enfermería</title>
+<style>
+  @page {
+    size: A5;
+    margin: 16mm 13mm 18mm 13mm;
+  }
+
+  :root{
+    --ink:#2a3a3f;
+    --ink-soft:#4e6468;
+    --title:#146c63;
+    --title-2:#2b6cb0;
+    --line:#bfd4d9;
+    --line-strong:#8fb7c0;
+    --paper:#ffffff;
+    --paper-soft:#f9fcfc;
+    --mint-050:#effbf6;
+    --mint-100:#dcf6eb;
+    --mint-200:#c9eddc;
+    --mint-300:#aee0ca;
+    --blue-050:#eef6ff;
+    --blue-100:#dcecff;
+    --blue-200:#c6e0fb;
+    --blue-300:#9ccaf1;
+    --sage:#45a384;
+    --teal:#178d82;
+    --accent:#5da8d8;
+    --gray-050:#fbfcfd;
+    --gray-100:#f3f6f7;
+    --gray-200:#dfe8eb;
+    --gray-300:#cddade;
+    --shadow:none;
+  }
+
+  *{
+    box-sizing:border-box;
+  }
+
+  html{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 10.3pt;
+    line-height: 1.58;
+    color: var(--ink);
+    background: var(--paper);
+    margin: 0;
+    counter-reset: page;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    page-break-after: avoid;
+    break-after: avoid;
+    font-family: "Arial", "Helvetica", sans-serif;
+  }
+
+  h1 {
+    font-size: 22pt;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--title);
+    letter-spacing: .4px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 15.2pt;
+    line-height: 1.3;
+    color: var(--title);
+    margin: 0 0 .9em 0;
+    padding: 0 0 .45em 0;
+    border-bottom: 2px solid var(--mint-300);
+    text-transform: uppercase;
+    letter-spacing: .2px;
+  }
+
+  h3 {
+    font-size: 12.1pt;
+    line-height: 1.35;
+    color: var(--title-2);
+    margin: 1.15em 0 .5em 0;
+    padding: .18em 0 .18em .55em;
+    border-left: 4px solid var(--blue-300);
+    background: linear-gradient(to right, rgba(220,236,255,.95), rgba(220,246,235,.55) 62%, transparent 92%);
+    border-radius: 2px;
+  }
+
+  h4 {
+    font-size: 10.7pt;
+    line-height: 1.35;
+    color: var(--title);
+    margin: 1em 0 .4em 0;
+    padding-bottom: .16em;
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 700;
+  }
+
+  p {
+    margin: .58em 0;
+    text-align: justify;
+    widows: 2;
+    orphans: 2;
+  }
+
+  ul, ol {
+    margin: .55em 0 .75em 1.2em;
+    padding-left: .25em;
+  }
+
+  li {
+    margin: .26em 0;
+    text-align: left;
+  }
+
+  strong { color: #244f58; }
+  em { color: #5d7074; }
+
+  section {
+    position: relative;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .cover {
+    min-height: calc(100vh - 20mm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18mm 8mm 14mm;
+    border: 1.5px solid var(--mint-300);
+    background:
+      linear-gradient(180deg, #f2fbf7 0%, #e6f8f0 35%, #e8f3ff 72%, #f8fdff 100%);
+    position: relative;
+  }
+
+  .cover::before,
+  .cover::after{
+    content:"";
+    position:absolute;
+    inset:10mm;
+    border:1px solid rgba(111,174,184,.28);
+    pointer-events:none;
+  }
+
+  .cover h1 {
+    margin-bottom: .45em;
+  }
+
+  .cover h2 {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.4em 0;
+    color: var(--ink-soft);
+    font-size: 11.6pt;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: .3px;
+  }
+
+  .cover .image-placeholder{
+    max-width: 78%;
+    margin-top: 1.2em;
+  }
+
+  .index {
+    margin-top: .4em;
+    padding: 0;
+  }
+
+  .index h2 {
+    text-align: center;
+    border-bottom: 0;
+    margin-bottom: .9em;
+    background: linear-gradient(to right, rgba(93,168,216,.08), var(--mint-100), rgba(69,163,132,.08));
+    padding: .3em 0;
+  }
+
+  .index ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdfd 100%);
+  }
+
+  .index li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .7em;
+    align-items: center;
+    margin: 0;
+    padding: .55em .8em;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .index li:nth-child(odd){
+    background: var(--gray-050);
+  }
+
+  .index li span:first-child{
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .index li span:last-child{
+    min-width: 1.9em;
+    text-align: center;
+    color: var(--title);
+    font-weight: 700;
+    background: linear-gradient(180deg, #dff7ec 0%, #d7f0f5 100%);
+    border: 1px solid var(--mint-300);
+    padding: .1em .45em;
+    border-radius: 999px;
+  }
+
+  .unidad {
+    padding: 0;
+  }
+
+  .unidad > h2{
+    background: linear-gradient(to right, rgba(220,246,235,.98), rgba(220,236,255,.72) 65%, rgba(255,255,255,0));
+    padding: .46em .58em;
+    border-bottom: 2px solid var(--sage);
+    border-top: 1px solid var(--mint-300);
+  }
+
+  .unidad > p:first-of-type{
+    margin-top: .9em;
+    padding: .55em .7em;
+    background: var(--gray-050);
+    border: 1px solid var(--gray-200);
+    font-size: 9.45pt;
+    color: var(--ink-soft);
+  }
+
+  .highlight {
+    background: linear-gradient(to right, #dff7ec, #eef7ff 78%, #f9fcfb 100%);
+    border-left: 5px solid var(--sage);
+    padding: .72em .88em;
+    margin: .95em 0;
+    color: #315257;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .highlight strong{
+    color: var(--title);
+  }
+
+  .table-title,
+  .table-subtitle{
+    font-size: 11.7pt;
+    color: var(--title);
+    margin: 1.15em 0 .55em;
+    padding: .3em .55em;
+    background: linear-gradient(to right, #ddf6ea, #eaf4ff 72%, transparent 96%);
+    border-left: 4px solid var(--teal);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  /* =========================
+     IMÁGENES – APUNTE A5
+  ========================= */
+
+  figure{
+    margin: 0;
+  }
+
+  .img-box{
+    margin: 1.1em 0 1.25em;
+    text-align: center;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .img-apunte,
+  .unidad img,
+  .cover img{
+    display: block;
+    width: 95%;
+    max-width: 100%;
+    max-height: 220px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f8fbff 0%, #f5fcf8 50%, #fffdf7 100%);
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 18px rgba(80, 110, 130, 0.08);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .img-apunte.sm,
+  .unidad img.sm,
+  .cover img.sm{
+    width: 80%;
+    max-height: 150px;
+  }
+
+  .img-apunte.md,
+  .unidad img.md,
+  .cover img.md{
+    width: 95%;
+    max-height: 220px;
+  }
+
+  .img-apunte.lg,
+  .unidad img.lg,
+  .cover img.lg{
+    width: 100%;
+    max-height: 260px;
+  }
+
+  .img-apunte.wide,
+  .unidad img.wide,
+  .cover img.wide{
+    width: 100%;
+    max-height: 180px;
+  }
+
+  .img-apunte.tall,
+  .unidad img.tall,
+  .cover img.tall{
+    width: 95%;
+    max-height: 280px;
+  }
+
+  .img-apunte.compact,
+  .unidad img.compact,
+  .cover img.compact{
+    width: 90%;
+    max-height: 200px;
+  }
+
+  .img-apunte.float-right,
+  .img-apunte.float-left,
+  .unidad img.float-right,
+  .unidad img.float-left,
+  .cover img.float-right,
+  .cover img.float-left{
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .img-apunte.bg-slot,
+  .unidad img.bg-slot,
+  .cover img.bg-slot{
+    width: 100%;
+    max-height: 240px;
+  }
+
+  .img-apunte.hero-slot,
+  .unidad img.hero-slot,
+  .cover img.hero-slot{
+    width: 100%;
+    max-height: 280px;
+  }
+
+  .img-apunte.clean,
+  .unidad img.clean,
+  .cover img.clean{
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .img-apunte.soft,
+  .unidad img.soft,
+  .cover img.soft{
+    background: linear-gradient(135deg, #f9fcff 0%, #f4fbf8 50%, #fffef7 100%);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(95, 125, 145, 0.08);
+  }
+
+  .img-apunte.glow,
+  .unidad img.glow,
+  .cover img.glow{
+    background: radial-gradient(circle at top left, rgba(255,255,255,.95), rgba(241,248,255,.92) 50%, rgba(244,252,247,.95) 100%);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(110, 135, 150, 0.10);
+  }
+
+  .img-box figcaption{
+    margin-top: 6px;
+    font-size: 9.2pt;
+    color: #6d7580;
+    font-style: italic;
+  }
+
+  /* Placeholder limpio y estético */
+  .image-placeholder {
+    width: 95%;
+    min-height: 160px;
+    margin: 1em auto 1.1em;
+    border: none;
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, rgba(249,252,255,1) 0%, rgba(242,250,247,1) 48%, rgba(255,252,245,1) 100%);
+    color: #7a8791;
+    font-size: 9.15pt;
+    line-height: 1.45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.1em;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: inset 0 0 0 1px rgba(190,210,220,.28), 0 6px 18px rgba(100,120,140,.06);
+  }
+
+  .image-placeholder.small{
+    width: 80%;
+    min-height: 120px;
+  }
+
+  .image-placeholder.tall{
+    width: 95%;
+    min-height: 240px;
+  }
+
+  .image-placeholder.wide{
+    width: 100%;
+    min-height: 160px;
+  }
+
+  .image-placeholder.compact{
+    width: 95%;
+    min-height: 180px;
+  }
+
+  .image-placeholder.float-right,
+  .image-placeholder.float-left{
+    width: 100%;
+    min-height: 180px;
+  }
+
+  .image-placeholder.bg-slot,
+  .image-placeholder.hero-slot{
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .image-placeholder::before{
+    content:"";
+    display:none;
+  }
+
+  img{
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: .8em 0 1em;
+    page-break-inside: auto;
+  }
+
+  th, td {
+    border: 1px solid var(--line);
+    padding: 8px 9px;
+    vertical-align: top;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  th {
+    background: linear-gradient(180deg, #4aa7a0 0%, #2d8a86 100%);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  td {
+    background: #fcfefe;
+    color: var(--ink);
+    font-size: 9.55pt;
+  }
+
+  tbody tr:nth-child(even) td{
+    background: #f6fbfb;
+  }
+
+  .nanda-table-wrap,
+  .simple-table-wrap,
+  .need-table-wrap,
+  .clinical-table-wrap,
+  .cranial-table-wrap,
+  .compare-table-wrap,
+  .interp-table-wrap,
+  .role-table-wrap,
+  .ecg-table-wrap{
+    margin: 1em 0 1.2em;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow: visible;
+  }
+
+  .nanda-table th,
+  .need-table th,
+  .cranial-table th,
+  .ecg-table th{
+    background: linear-gradient(180deg, #53b39d 0%, #2f9a88 100%);
+  }
+
+  .simple-table th{
+    background: linear-gradient(180deg, #5d94d3 0%, #447ab8 100%);
+  }
+
+  .clinical-table th,
+  .compare-table th,
+  .interp-table th,
+  .role-table th{
+    background: linear-gradient(180deg, #6ba8c8 0%, #4d88b0 100%);
+    color:#fff;
+  }
+
+  .nanda-table td.col-main,
+  .need-table td.left,
+  .cranial-table td.left,
+  .compare-table td.label,
+  .role-table td.role,
+  .ecg-table td.left,
+  .interp-table td.score{
+    background: linear-gradient(180deg, #dff7ec 0%, #d7f0f5 100%);
+    color: var(--title);
+    font-weight: 700;
+  }
+
+  .nanda-table td.col-code,
+  .simple-table td.code{
+    background: linear-gradient(180deg, #eef5ff 0%, #e0efff 100%);
+    color: #315267;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .nanda-table td.col-result,
+  .need-table td.right,
+  .cranial-table td.right,
+  .compare-table td.col,
+  .role-table td.function,
+  .ecg-table td.right,
+  .interp-table td.result{
+    background: #fbfeff;
+    color: #334d54;
+  }
+
+  .simple-table td.label{
+    background: linear-gradient(180deg, #eefaf3 0%, #f6fcff 100%);
+    color: var(--title);
+    font-weight: 700;
+  }
+
+  .simple-table td.function{
+    color: #355b73;
+  }
+
+  .clinical-table td{
+    background: #fcfeff;
+  }
+
+  .clinical-table tbody tr:nth-child(even) td,
+  .compare-table tbody tr:nth-child(even) td.col,
+  .interp-table tbody tr:nth-child(even) td.result,
+  .role-table tbody tr:nth-child(even) td:not(.role),
+  .ecg-table tbody tr:nth-child(even) td.right,
+  .need-table tbody tr:nth-child(even) td.right,
+  .cranial-table tbody tr:nth-child(even) td.right{
+    background: #f4f9fa;
+  }
+
+  .page-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 6mm;
+    font-size: 8.4pt;
+    color: #6d8186;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13mm;
+    pointer-events: none;
+  }
+
+  .page-footer .page-num::before{
+    content: "Página " counter(page);
+  }
+
+  @media print{
+    body{
+      counter-reset: page;
+    }
+    .page-footer{
+      position: fixed;
+    }
+    .page-break{
+      counter-increment: page;
+    }
+    .cover, .index, .unidad{
+      page-break-inside: avoid;
+    }
+    h2, h3, h4, .highlight, .image-placeholder{
+      page-break-after: avoid;
+    }
+    table, tr, td, th{
+      page-break-inside: avoid;
+    }
+  }
+
+  @media screen{
+    body{
+      max-width: 148mm;
+      margin: 0 auto;
+      padding: 10mm 13mm 18mm;
+      background: #eef3f4;
+    }
+    .sheet-preview{
+      background: #fff;
+    }
+  }
+
+  .index li:nth-child(4n+1) span:last-child{ background:#dff7ec; border-color:#9ed9bf; color:#146c63; }
+  .index li:nth-child(4n+2) span:last-child{ background:#e4f0ff; border-color:#b7d1f5; color:#2b6cb0; }
+  .index li:nth-child(4n+3) span:last-child{ background:#eef3ff; border-color:#c6cff4; color:#5c6ac4; }
+  .index li:nth-child(4n+4) span:last-child{ background:#eefbf6; border-color:#b6e7d1; color:#1f7d68; }
+
+  .unidad > h2{ box-shadow: inset 0 0 0 1px rgba(69,163,132,.10); }
+  .unidad:nth-of-type(4n+1) > h2{ border-left: 6px solid #45a384; }
+  .unidad:nth-of-type(4n+2) > h2{ border-left: 6px solid #5da8d8; }
+  .unidad:nth-of-type(4n+3) > h2{ border-left: 6px solid #7aa7d8; }
+  .unidad:nth-of-type(4n+4) > h2{ border-left: 6px solid #6fc0a7; }
+
+  .unidad h3:nth-of-type(3n+1){ border-left-color:#45a384; color:#146c63; }
+  .unidad h3:nth-of-type(3n+2){ border-left-color:#5da8d8; color:#2b6cb0; }
+  .unidad h3:nth-of-type(3n+3){ border-left-color:#7f9dd8; color:#5668b6; }
+
+  .highlight{ border-radius: 4px; }
+  .highlight:nth-of-type(odd){ border-left-color:#45a384; }
+  .highlight:nth-of-type(even){ border-left-color:#5da8d8; }
+
+  tbody tr:nth-child(even) td{ background: #f4fbfc; }
+  .simple-table tbody tr:nth-child(even) td{ background:#eef5ff; }
+  .need-table tbody tr:nth-child(even) td.right{ background:#eef9ff; }
+  .clinical-table tbody tr:nth-child(even) td{ background:#eefaf6; }
+
+  /* ===== Versión colorinchi / estilo apunte resaltado ===== */
+  :root{
+    --coral:#ff8f8f;
+    --sun:#ffd86f;
+    --lav:#cbb6ff;
+    --pink:#ffb7df;
+    --mint-bright:#8de0b8;
+    --sky:#8ecbff;
+    --peach:#ffc8a2;
+    --lemon:#fff1a6;
+    --lilac:#e5d7ff;
+    --aqua:#b8f0ec;
+  }
+
+  body{
+    background: #fffdfd;
+  }
+
+  p strong,
+  li strong,
+  td strong{
+    color:#253b57;
+    padding: 0 .12em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background-image: linear-gradient(transparent 52%, rgba(255,241,166,.95) 52%);
+  }
+
+  em{
+    font-style: normal;
+    padding: 0 .1em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background-image: linear-gradient(transparent 58%, rgba(229,215,255,.95) 58%);
+    color:#5d4f83;
+  }
+
+  ul li::marker,
+  ol li::marker{
+    color:#38a169;
+    font-weight:700;
+  }
+
+  .cover{
+    border: 2px solid #c9b6ff;
+    background:
+      linear-gradient(180deg, #fff2f8 0%, #eef8ff 28%, #f1fff8 60%, #fffcea 100%);
+  }
+
+  .cover::before{ border-color: rgba(255,143,143,.35); }
+  .cover::after{ border-color: rgba(142,203,255,.34); inset:13mm; }
+
+  .cover h1{
+    color:#7d4cc4;
+    text-shadow:none;
+  }
+
+  .cover h2{
+    color:#3d6985;
+    background: linear-gradient(to right, rgba(255,216,111,.18), rgba(255,183,223,.18));
+    padding:.25em .8em;
+    border-radius:999px;
+  }
+
+  .index h2{
+    background: linear-gradient(to right, rgba(255,183,223,.35), rgba(255,216,111,.32), rgba(184,240,236,.35), rgba(229,215,255,.38));
+    border:1px solid #eadcf6;
+    border-left:6px solid #7d4cc4;
+  }
+
+  .index ul{
+    border: 1.5px solid #e4d9f4;
+    background: linear-gradient(180deg, #fffefe 0%, #fcfcff 100%);
+  }
+
+  .index li:nth-child(6n+1){ background:#fff4f9; }
+  .index li:nth-child(6n+2){ background:#f3fbff; }
+  .index li:nth-child(6n+3){ background:#f5fff8; }
+  .index li:nth-child(6n+4){ background:#fffdf0; }
+  .index li:nth-child(6n+5){ background:#f7f3ff; }
+  .index li:nth-child(6n+6){ background:#fff7f1; }
+
+  .index li span:first-child{
+    position:relative;
+    padding-left:.25em;
+  }
+
+  .index li span:first-child::before{
+    content:"";
+    display:inline-block;
+    width:.55em;
+    height:.55em;
+    border-radius:50%;
+    margin-right:.45em;
+    vertical-align:middle;
+    background:#8de0b8;
+  }
+  .index li:nth-child(6n+2) span:first-child::before{ background:#8ecbff; }
+  .index li:nth-child(6n+3) span:first-child::before{ background:#ffb7df; }
+  .index li:nth-child(6n+4) span:first-child::before{ background:#ffd86f; }
+  .index li:nth-child(6n+5) span:first-child::before{ background:#cbb6ff; }
+  .index li:nth-child(6n+6) span:first-child::before{ background:#ffc8a2; }
+
+  .index li:nth-child(6n+1) span:last-child{ background:#dcfff0; border-color:#9ee0bf; color:#197557; }
+  .index li:nth-child(6n+2) span:last-child{ background:#e3f2ff; border-color:#b4d6ff; color:#29639b; }
+  .index li:nth-child(6n+3) span:last-child{ background:#ffe7f4; border-color:#f5b4d7; color:#a04d7d; }
+  .index li:nth-child(6n+4) span:last-child{ background:#fff4b9; border-color:#ead36f; color:#8a6a00; }
+  .index li:nth-child(6n+5) span:last-child{ background:#efe7ff; border-color:#ccb7f5; color:#6a56b8; }
+  .index li:nth-child(6n+6) span:last-child{ background:#ffe9da; border-color:#f4b995; color:#9a5d35; }
+
+  .unidad{
+    position:relative;
+  }
+
+  .unidad::before{
+    content:"";
+    position:absolute;
+    left:-7mm;
+    top:1.2em;
+    width:3mm;
+    height:28mm;
+    border-radius:2mm;
+    background: linear-gradient(180deg, #8de0b8, #8ecbff, #ffb7df, #ffd86f);
+  }
+
+  .unidad > h2{
+    padding:.58em .7em;
+    border-bottom-width:3px;
+    border-radius: 8px 8px 0 0;
+    box-shadow:none;
+  }
+
+  .unidad:nth-of-type(5n+1) > h2{ background:linear-gradient(to right, #dcfff0, #eefcff 74%, #fffdf3); border-bottom-color:#39a96b; border-left:8px solid #39a96b; }
+  .unidad:nth-of-type(5n+2) > h2{ background:linear-gradient(to right, #e7f3ff, #f0fbff 74%, #f7f4ff); border-bottom-color:#4b88d9; border-left:8px solid #4b88d9; }
+  .unidad:nth-of-type(5n+3) > h2{ background:linear-gradient(to right, #ffe8f4, #fff5fb 74%, #fef9ff); border-bottom-color:#d05b9a; border-left:8px solid #d05b9a; }
+  .unidad:nth-of-type(5n+4) > h2{ background:linear-gradient(to right, #fff4c7, #fffaf0 74%, #fffdf8); border-bottom-color:#d2a116; border-left:8px solid #d2a116; }
+  .unidad:nth-of-type(5n+5) > h2{ background:linear-gradient(to right, #efe6ff, #f8f4ff 74%, #fffafe); border-bottom-color:#7d5ad1; border-left:8px solid #7d5ad1; }
+
+  .unidad > p:first-of-type{
+    border-left:4px solid #ffb7df;
+    background: linear-gradient(to right, #fff9fc, #fbfdff);
+    border-radius: 0 0 8px 8px;
+  }
+
+  .unidad h3{
+    border-left-width:7px;
+    padding:.28em .45em .28em .65em;
+    border-radius:0 8px 8px 0;
+    font-weight:700;
+  }
+
+  .unidad h3:nth-of-type(5n+1){
+    color:#13795b;
+    border-left-color:#39a96b;
+    background:linear-gradient(to right, rgba(141,224,184,.42), rgba(255,255,255,0) 92%);
+  }
+  .unidad h3:nth-of-type(5n+2){
+    color:#2d6bb0;
+    border-left-color:#4b88d9;
+    background:linear-gradient(to right, rgba(142,203,255,.42), rgba(255,255,255,0) 92%);
+  }
+  .unidad h3:nth-of-type(5n+3){
+    color:#b24982;
+    border-left-color:#d05b9a;
+    background:linear-gradient(to right, rgba(255,183,223,.42), rgba(255,255,255,0) 92%);
+  }
+  .unidad h3:nth-of-type(5n+4){
+    color:#9b7600;
+    border-left-color:#d2a116;
+    background:linear-gradient(to right, rgba(255,216,111,.45), rgba(255,255,255,0) 92%);
+  }
+  .unidad h3:nth-of-type(5n+5){
+    color:#6a4db5;
+    border-left-color:#7d5ad1;
+    background:linear-gradient(to right, rgba(203,182,255,.42), rgba(255,255,255,0) 92%);
+  }
+
+  h4{
+    padding:.18em .35em .18em .45em;
+    border-bottom:none;
+    border-left:4px solid #ffc8a2;
+    background: linear-gradient(to right, rgba(255,200,162,.28), rgba(255,255,255,0) 88%);
+    border-radius:0 6px 6px 0;
+  }
+
+  .highlight{
+    border-left-width:8px;
+    border-radius:8px;
+    padding:.8em .95em;
+    box-shadow:none;
+  }
+  .highlight:nth-of-type(4n+1){ background:linear-gradient(to right, #dcfff0, #f8fffc); border-left-color:#39a96b; }
+  .highlight:nth-of-type(4n+2){ background:linear-gradient(to right, #e8f4ff, #fbfdff); border-left-color:#4b88d9; }
+  .highlight:nth-of-type(4n+3){ background:linear-gradient(to right, #ffe9f4, #fffafd); border-left-color:#d05b9a; }
+  .highlight:nth-of-type(4n+4){ background:linear-gradient(to right, #fff3bf, #fffdf6); border-left-color:#d2a116; }
+
+  .table-title,
+  .table-subtitle{
+    border-left-width:8px;
+    border-bottom:none;
+    border-radius:0 8px 8px 0;
+    font-weight:700;
+  }
+  .table-title:nth-of-type(2n+1), .table-subtitle:nth-of-type(2n+1){ background:linear-gradient(to right, #ffe7f4, #fff); border-left-color:#d05b9a; color:#a24377; }
+  .table-title:nth-of-type(2n), .table-subtitle:nth-of-type(2n){ background:linear-gradient(to right, #e7f2ff, #fff); border-left-color:#4b88d9; color:#29639b; }
+
+  .image-placeholder{
+    min-height:160px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg, #fff7fb 0%, #f0f8ff 34%, #f4fff8 67%, #fffdea 100%);
+    box-shadow: inset 0 0 0 1px rgba(205,190,240,.22), 0 8px 18px rgba(120, 130, 150, 0.06);
+    color:#576b78;
+  }
+
+  .image-placeholder::before{
+    content:"";
+  }
+
+  table{
+    border:1.5px solid #e1d8ef;
+  }
+
+  th{
+    color:#fff;
+    text-transform:none;
+  }
+
+  .nanda-table th{ background:linear-gradient(180deg, #45b97c 0%, #2d9f63 100%); }
+  .simple-table th{ background:linear-gradient(180deg, #5a9df0 0%, #3f7fd1 100%); }
+  .need-table th{ background:linear-gradient(180deg, #e678b0 0%, #cd5b95 100%); }
+  .clinical-table th{ background:linear-gradient(180deg, #f0bc3c 0%, #d39a09 100%); }
+  .cranial-table th{ background:linear-gradient(180deg, #8b6be8 0%, #6f52cc 100%); }
+  .compare-table th{ background:linear-gradient(180deg, #56c9c0 0%, #2ea69b 100%); }
+  .interp-table th{ background:linear-gradient(180deg, #ff9d72 0%, #ea7a4a 100%); }
+  .role-table th{ background:linear-gradient(180deg, #6cb6a9 0%, #459987 100%); }
+  .ecg-table th{ background:linear-gradient(180deg, #6f9cff 0%, #5278db 100%); }
+
+  .nanda-table td.col-main{ background:#e8fff2; color:#147556; }
+  .nanda-table td.col-code{ background:#edf7ff; color:#2d628a; }
+  .nanda-table td.col-result{ background:#fff8fc; color:#5b4a64; }
+
+  .simple-table td.label{ background:#eef9ff; color:#255b8c; }
+  .simple-table td.code{ background:#fff0f7; color:#9f4978; }
+  .simple-table td.function{ background:#f6fff7; color:#336955; }
+
+  .need-table td.left{ background:#fff0f8; color:#a04678; }
+  .need-table td.right{ background:#fcfdff; }
+
+  .clinical-table tbody tr:nth-child(odd) td{ background:#fffdf1; }
+  .clinical-table tbody tr:nth-child(even) td{ background:#fff8dc; }
+
+  .cranial-table td.left{ background:#f1ebff; color:#6549b8; }
+  .cranial-table td.right{ background:#fcfbff; }
+
+  .compare-table td.label{ background:#e8fffb; color:#1f7e76; }
+  .interp-table td.score{ background:#fff1e8; color:#b05d2f; }
+  .role-table td.role{ background:#ecfff8; color:#267661; }
+  .ecg-table td.left{ background:#eef3ff; color:#445fb7; }
+
+  tbody tr:nth-child(even) td{ background:#fafcff; }
+
+  .page-footer{
+    color:#6a6680;
+    border-top:1px solid #eadff8;
+    padding-top:2mm;
+    background:linear-gradient(to right, rgba(255,183,223,.08), rgba(142,203,255,.08), rgba(255,216,111,.08));
+  }
+
+</style>
+</head>
+<body>
+<div class="page-footer"><span>Adulto Anciano · Apunte de Enfermería</span><span class="page-num"></span></div>
+<!-- Portada -->
+<section class="cover">
+<h1>Adulto Anciano</h1>
+<h2>Apunte de Enfermería</h2>
+<div class="image-placeholder hero-slot">
+  <img src="portada.png" alt="">
+</div>
+</section>
+<div class="page-break"></div>
+<!-- Índice -->
+<section class="index">
+<h2>Índice</h2>
+<ul>
+<li><span>Unidad 1 – Atención Primaria</span><span>1</span></li>
+<li><span>Unidad 2 – Valoración Integral</span><span>5</span></li>
+<li><span>Unidad 3 – Cuidados Específicos</span><span>12</span></li>
+<li><span>Unidad 4 – Nutrición</span><span>20</span></li>
+<li><span>Unidad 5 – Farmacología</span><span>28</span></li>
+<li><span>Unidad 6 – Salud Mental</span><span>36</span></li>
+<li><span>Unidad 7 – Rehabilitación</span><span>44</span></li>
+<li><span>Unidad 8 – Cuidados Paliativos</span><span>52</span></li>
+<li><span>Unidad 9 – Enfermedades Crónicas</span><span>60</span></li>
+<li><span>Unidad 10 – Prevención</span><span>68</span></li>
+<li><span>Unidad 11 – Ética y Bioética</span><span>76</span></li>
+<li><span>Unidad 12 – Comunicación</span><span>84</span></li>
+<li><span>Unidad 13 – Familia y Cuidador</span><span>92</span></li>
+<li><span>Unidad 14 – Evaluación Funcional</span><span>100</span></li>
+<li><span>Unidad 15 – Seguridad del Paciente</span><span>108</span></li>
+<li><span>Unidad 16 – Políticas de Salud</span><span>116</span></li>
+<li><span>Unidad 17 – Investigación</span><span>124</span></li>
+</ul>
+</section>
+<div class="page-break"></div>
+<!-- Plantilla de Unidades -->
+<section class="unidad">
+<h2>UNIDAD Nº 1 – ATENCIÓN PRIMARIA EN LAS DIFERENTES ETAPAS DE LA VIDA</h2>
+<p><strong>Referencia Bibliográfica:</strong> Henderson, V. La naturaleza de la enfermería; OPS/OMS: Renovación de la APS; Ministerio de Salud de la Nación: Manual de APS; Smeltzer &amp; Bare: Brunner y Suddarth Enfermería Medicoquirúrgica.</p>
+<h3>1. Atención Primaria de la Salud (APS)</h3>
+<p>La APS es la estrategia central del sistema sanitario argentino y latinoamericano. Se basa en la accesibilidad, integralidad, participación comunitaria, equidad y continuidad del cuidado.</p>
+<p>Orienta el trabajo de enfermería hacia el promotor de salud, el acompañamiento familiar, la prevención, el diagnóstico precoz y el seguimiento longitudinal del paciente.</p>
+<div class="image-placeholder float-right compact">
+  <img src="2.png" alt="">
+</div>
+<h3>2. Características de la población en el país y la región</h3>
+<ul>
+<li>Proceso de envejecimiento poblacional progresivo.</li>
+<li>Aumento de enfermedades crónicas no transmisibles (HTA, diabetes, obesidad, sedentarismo).</li>
+<li>Persisten desigualdades socioeconómicas que condicionan el acceso al sistema de salud.</li>
+<li>Transición epidemiológica: menos enfermedades infecciosas, más patologías crónicas y degenerativas.</li>
+</ul>
+<h3>3. Perfil de salud del adulto</h3>
+<ul>
+<li>Predominio de enfermedades crónicas: HTA, diabetes, cardiopatías, EPOC, cáncer.</li>
+<li>Alta prevalencia de problemas de salud mental: ansiedad, depresión y consumo problemático.</li>
+<li>Factores sociales: empleo precario, estrés, violencia, escaso tiempo para autocuidado.</li>
+<li>En el adulto mayor: fragilidad, multimorbilidad y riesgo de dependencia funcional.</li>
+</ul>
+<h3>4. Modelo de Atención Primaria con Enfoque Familiar</h3><div class="image-placeholder float-right compact">
+  <img src="3.png" alt="">
+</div>
+<p>Considera a la familia como unidad de cuidado, no solo al individuo. Integra aspectos biológicos, psicológicos, culturales y sociales.</p>
+<ul>
+<li>Cuidado centrado en la persona y su contexto.</li>
+<li>Acompañamiento en el curso de vida.</li>
+<li>Trabajo interdisciplinario.</li>
+<li>Respeto por la diversidad y costumbres familiares.</li>
+</ul>
+<div class="highlight">Enfermería cumple un rol de guía, educador, sostén y articulador.</div>
+<h3>5. Educación para la Salud</h3>
+<p>Proceso continuo que busca favorecer conductas y estilos de vida saludables.</p>
+<ul>
+<li>Talleres, consejerías, actividades grupales, entrevistas.</li>
+<li>Diseño de materiales educativos.</li>
+<li>Técnicas comunicacionales y enfoque humanizado.</li>
+</ul>
+<h3>6. Programas de Salud Centrados en el Adulto</h3>
+<ul>
+<li>Programa de ECNT.</li>
+<li>Control cardiovascular.</li>
+<li>Salud Sexual y Reproductiva.</li>
+<li>Prevención de cáncer (mama, colon, cuello uterino).</li>
+<li>Vacunación.</li>
+<li>Salud mental y consumos problemáticos.</li>
+<li>Promoción de actividad física y alimentación saludable.</li>
+</ul>
+<h3>7. Consulta de Enfermería</h3>
+<div class="image-placeholder float-right compact">
+  <img src="5.png" alt="">
+</div>
+<ul>
+<li>Valoración integral del usuario.</li>
+<li>Identificación de problemas reales y potenciales.</li>
+<li>Consejería y educación.</li>
+<li>Control de signos vitales y parámetros de riesgo.</li>
+<li>Derivación oportuna.</li>
+<li>Registro sistemático.</li>
+</ul>
+<div class="highlight">La consulta permite la continuidad del cuidado y el seguimiento en el tiempo.</div>
+<h3>8. Proyectos comunitarios interinstitucionales e intersectoriales</h3>
+<p>Se articulan acciones con escuelas, municipios, organizaciones sociales, hospitales y centros comunitarios.</p>
+<p>Abordan problemáticas como: alimentación, adicciones, salud sexual, prevención de violencia, envejecimiento activo.</p>
+<h3>9. Trabajo comunitario</h3><div class="image-placeholder float-right compact">
+  <img src="6.png" alt="">
+</div>
+<p>Enfermería realiza diagnósticos participativos, identifica necesidades locales y planifica acciones de promoción y prevención.</p>
+<ul>
+<li>Mapeo comunitario</li>
+<li>Diagnóstico situacional</li>
+<li>Visitas domiciliarias</li>
+<li>Talleres grupales</li>
+</ul>
+<h3>10. Atención domiciliaria e internación del adulto</h3><div class="image-placeholder bg-slot">
+  <img src="7.png" alt="">
+</div>
+<ul>
+<li>Valoración integral en domicilio</li>
+<li>Control de tratamientos</li>
+<li>Cuidado de heridas</li>
+<li>Educación al cuidador</li>
+<li>Prevención de complicaciones</li>
+</ul>
+<div class="highlight">La internación domiciliaria evita hospitalizaciones prolongadas y favorece la recuperación en un entorno familiar.</div>
+<h3>Acciones de Enfermería (generales y aplicables en APS)</h3>
+<h4>1. Valoración</h4>
+<ul>
+<li>Anamnesis completa y dirigida.</li>
+<li>Control de signos vitales.</li>
+<li>Evaluación de dolor, movilidad, nutrición e hidratación.</li>
+<li>Identificación de factores de riesgo.</li>
+<li>Evaluación de salud mental y contexto social/familiar.</li>
+</ul>
+<h4>2. Prevención y Promoción</h4>
+<ul>
+<li>Educación sobre hábitos saludables.</li>
+<li>Técnicas de autocuidado.</li>
+<li>Promoción de vacunación.</li>
+<li>Consejería en salud sexual y reproductiva.</li>
+<li>Prevención de enfermedades prevalentes.</li>
+</ul>
+<h4>3. Ejecución de cuidados</h4>
+<ul>
+<li>Administración de medicación.</li>
+<li>Control de glucemia y curaciones.</li>
+<li>Monitoreo de adherencia a tratamientos.</li>
+<li>Nebulizaciones, oxigenoterapia, higiene y confort.</li>
+<li>Acompañamiento en procedimientos diagnósticos.</li>
+</ul>
+<h4>4. Educación y Consejería</h4>
+<ul>
+<li>Explicación de diagnósticos y cuidados.</li>
+<li>Enseñar signos de alarma.</li>
+<li>Capacitación a cuidadores y familiares.</li>
+<li>Herramientas para manejo de estrés y crisis.</li>
+</ul>
+<h4>5. Registro y seguimiento</h4>
+<ul>
+<li>Documentar intervenciones en historia clínica.</li>
+<li>Programar controles regulares.</li>
+<li>Evaluar evolución y ajustar cuidados.</li>
+<li>Seguimiento telefónico o domiciliario.</li>
+</ul>
+<h4>6. Coordinación y trabajo en equipo</h4>
+<ul>
+<li>Derivación a otros profesionales.</li>
+<li>Participación en reuniones interdisciplinarias.</li>
+<li>Articulación con centros de salud y programas comunitarios.</li>
+</ul>
+<h4>7. Atención domiciliaria</h4>
+<ul>
+<li>Valoración del hogar y red de apoyo.</li>
+<li>Control de tratamientos y cuidados postoperatorios.</li>
+<li>Prevención de caídas y adaptación del entorno.</li>
+<li>Acompañamiento en cuidados paliativos.</li>
+</ul>
+<h4>8. Acciones comunitarias</h4>
+<ul>
+<li>Participación en campañas, talleres y ferias de salud.</li>
+<li>Diagnósticos comunitarios y mapeos participativos.</li>
+<li>Identificación de grupos vulnerables e intervenciones.</li>
+</ul>
+<div class="image-placeholder float-left compact">
+  <img src="8.png" alt="">
+</div>
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 2 – PROCESO ENFERMERO EN EL ADULTO MAYOR</h2>
+<p><strong>Referencia Bibliográfica:</strong> Eliopoulos, C. Enfermería Gerontológica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Millán Calenti, J.C. Principios de Geriatría y Gerontología; NANDA-NIC-NOC.</p>
+<h3>1. Adulto Mayor: Concepto</h3>
+<p>El adulto mayor es la persona de 60 años o más, reconocida por su vulnerabilidad biológica, social y funcional. El envejecimiento es un proceso natural, progresivo, universal e irreversible, pero no necesariamente patológico.</p>
+<h3>2. Características de la población en la región</h3>
+<ul>
+<li>En Argentina y La Rioja la población envejece rápidamente.</li>
+<li>Aumento de enfermedades crónicas y dependencia funcional.</li>
+<li>Desigualdades económicas y sociales que impactan en la calidad de vida.</li>
+<li>Mayor demanda de servicios de salud de larga duración.</li>
+</ul>
+<h3>3. Perfil de salud del Adulto Mayor</h3>
+<ul>
+<li>Predominio de HTA, diabetes, EPOC, insuficiencia cardíaca, artrosis, deterioro cognitivo, depresión.</li>
+<li>Mayor riesgo de polifarmacia y eventos adversos.</li>
+<li>Fragilidad y vulnerabilidad a caídas, infecciones y deshidratación.</li>
+<li>Problemas psicosociales frecuentes: soledad, abandono, pobreza.</li>
+</ul>
+<h3>4. Cambios fisiológicos y teorías del envejecimiento</h3>
+<h4>Cambios fisiológicos</h4>
+<ul>
+<li>Cardiovasculares: menor elasticidad arterial, disminución del gasto cardíaco.</li>
+<li>Respiratorios: menor capacidad pulmonar.</li>
+<li>Renales: reducción del filtrado glomerular.</li>
+<li>Musculoesqueléticos: sarcopenia, riesgo de caídas.</li>
+<li>Neurológicos: enlentecimiento cognitivo, disminución de reflejos.</li>
+<li>Inmunológicos: mayor susceptibilidad a infecciones.</li>
+</ul>
+<h4>Teorías del Envejecimiento</h4>
+<ul>
+<li>Biológicas: desgaste, radicales libres, acortamiento telomérico.</li>
+<li>Psicosociales: actividad, continuidad, desvinculación.</li>
+<li>Integradoras: envejecimiento como proceso multidimensional.</li>
+</ul>
+<div class="image-placeholder bg-slot">
+   <img src="anc.png" alt="">
+</div>
+<h3>5. Valoración funcional</h3>
+ 
+</div>
+<p>Es central en el Proceso Enfermero del adulto mayor.</p>
+<ul>
+<li>ABVD: bañarse, vestirse, alimentarse, movilidad, continencia.</li>
+<li>AIVD: cocinar, comprar, manejar dinero, usar teléfono, medicación, transporte.</li>
+<li>Evaluación cognitiva (Mini-Mental), afectiva (Yesavage), nutricional (MNA), riesgo de caída y autonomía.</li>
+</ul>
+<h3>6. Atención de Enfermería a necesidades psicosociales</h3>
+<ul>
+<li>Soledad, depresión, aislamiento.</li>
+<li>Abandono familiar o institucional.</li>
+<li>Vulnerabilidad económica.</li>
+<li>Dificultad en la adaptación a la dependencia.</li>
+</ul>
+<div class="highlight">La enfermería debe promover acompañamiento, escucha, comunicación terapéutica y redes de apoyo.</div>
+<h3>7. El adulto mayor hospitalizado</h3><div class="image-placeholder bg-slot">
+  <img src="9.png" alt="">
+</div>
+<p>La hospitalización produce pérdida de autonomía, estrés, ansiedad, confusión y riesgo de caídas o úlceras por presión.</p>
+<h4>Significado para el paciente</h4>
+<p>Amenaza, miedo a la muerte, pérdida de control, pero también oportunidad de cuidado si se acompaña correctamente.</p>
+<h4>Transformaciones de la vida cotidiana</h4>
+<p>Cambios en horarios, alimentación, sueño, movilidad. Dependencia de otros para rutinas básicas.</p>
+<h3>8. Participación de la familia</h3><div class="image-placeholder float-left compact">
+  <img src="10.png" alt="">
+</div>
+<ul>
+<li>Brinda apoyo emocional, afectivo y práctico.</li>
+<li>Favorece la recuperación y adaptación.</li>
+<li>Participa en educación para el alta y cuidados domiciliarios.</li>
+</ul>
+<h3>9. Re-estructuración del tiempo en el paciente hospitalizado</h3>
+<p>El paciente pierde control sobre su tiempo. Enfermería debe favorecer la participación para evitar pérdida de identidad y dependencia.</p>
+<h3>10. Salud mental y trabajo</h3>
+<p>El adulto mayor puede atravesar depresión, ansiedad, duelo, deterioro cognitivo y tristeza por pérdida de roles laborales. La jubilación genera cambios económicos, sociales y emocionales importantes.</p>
+<h3>11. Ética del cuidado</h3>
+<ul>
+<li>Dignidad, autonomía e integridad.</li>
+<li>Respeto a la historia y valores personales.</li>
+<li>Comunicación empática y humanizada.</li>
+<li>Consentimiento informado y decisiones compartidas.</li>
+<li>Evitar infantilización y maltrato.</li>
+</ul>
+<h3>Acciones de Enfermería</h3>
+<h4>1. Valoración</h4>
+<ul>
+<li>Anamnesis completa y centrada en la persona.</li>
+<li>Evaluar funcionalidad (ABVD/AIVD).</li>
+<li>Control de signos vitales y riesgo de caídas.</li>
+<li>Evaluar cognición, afecto, estado nutricional y red de apoyo.</li>
+<li>Identificar factores de riesgo y polifarmacia.</li>
+</ul>
+<h4>2. Promoción y prevención</h4>
+<ul>
+<li>Fomentar actividad física segura y hábitos saludables.</li>
+<li>Promover vacunación (antigripal, neumococo, COVID-19).</li>
+<li>Educar sobre hidratación, alimentación y sueño.</li>
+<li>Prevenir caídas mediante adecuación del entorno.</li>
+</ul>
+<h4>3. Cuidado durante la hospitalización</h4>
+<ul>
+<li>Mantener rutinas personales en lo posible.</li>
+<li>Favorecer movilización temprana y autonomía.</li>
+<li>Prevenir delirium: reorientar, evitar aislamiento, controlar dolor.</li>
+<li>Cuidados de la piel, cambios posturales y prevención de úlceras.</li>
+<li>Vigilar efectos adversos de medicación.</li>
+</ul>
+<h4>4. Apoyo psicosocial</h4>
+<ul>
+<li>Escucha activa.</li>
+<li>Detectar signos de tristeza, abandono o maltrato.</li>
+<li>Estimular vínculos familiares y redes de apoyo.</li>
+<li>Facilitar actividades recreativas o cognitivas.</li>
+</ul>
+<h4>5. Educación al paciente y familia</h4>
+<ul>
+<li>Explicar enfermedad, tratamientos y signos de alarma.</li>
+<li>Enseñar cuidados domiciliarios y seguridad.</li>
+<li>Entrenar cuidadores en movilización y prevención.</li>
+<li>Preparar para el alta de forma progresiva.</li>
+</ul>
+<h4>6. Coordinación</h4>
+<ul>
+<li>Articular con trabajador social, fonoaudiología, nutrición, kinesiología.</li>
+<li>Derivar a salud mental cuando corresponde.</li>
+<li>Coordinar servicios de atención domiciliaria.</li>
+</ul>
+<h4>7. Registro</h4>
+<ul>
+<li>Documentar valoración, evolución y cuidados.</li>
+<li>Registrar cambios funcionales o emocionales.</li>
+<li>Evaluar resultados (NOC) y ajustar intervenciones (NIC).</li>
+</ul>
+<h3 class="table-title">Cuadro NANDA – NOC – NIC</h3>
+<div class="nanda-table-wrap">
+<table class="nanda-table">
+<thead>
+<tr>
+<th style="width: 22%;">Diagnóstico NANDA</th>
+<th style="width: 8%;">Código</th>
+<th style="width: 20%;">Resultado NOC</th>
+<th style="width: 8%;">Código</th>
+<th style="width: 22%;">Intervención NIC</th>
+<th style="width: 8%;">Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="col-main">Dolor agudo</td>
+<td class="col-code">00132</td>
+<td class="col-result">Control del dolor</td>
+<td class="col-code">1605</td>
+<td class="col-result">Manejo del dolor</td>
+<td class="col-code">1400</td>
+</tr>
+<tr>
+<td class="col-main">Patrón respiratorio ineficaz</td>
+<td class="col-code">00032</td>
+<td class="col-result">Estado respiratorio</td>
+<td class="col-code">0403</td>
+<td class="col-result">Manejo de vías aéreas</td>
+<td class="col-code">3140</td>
+</tr>
+<tr>
+<td class="col-main">Riesgo de infección</td>
+<td class="col-code">00004</td>
+<td class="col-result">Estado inmunológico</td>
+<td class="col-code">0703</td>
+<td class="col-result">Control de infecciones</td>
+<td class="col-code">6540</td>
+</tr>
+<tr>
+<td class="col-main">Intolerancia a la actividad</td>
+<td class="col-code">00092</td>
+<td class="col-result">Tolerancia a la actividad</td>
+<td class="col-code">0005</td>
+<td class="col-result">Manejo de energía</td>
+<td class="col-code">0180</td>
+</tr>
+<tr>
+<td class="col-main">Déficit de autocuidado</td>
+<td class="col-code">00108</td>
+<td class="col-result">Autocuidados</td>
+<td class="col-code">0300</td>
+<td class="col-result">Ayuda con autocuidado</td>
+<td class="col-code">1800</td>
+</tr>
+<tr>
+<td class="col-main">Riesgo de caídas</td>
+<td class="col-code">00155</td>
+<td class="col-result">Conducta prevención caídas</td>
+<td class="col-code">1909</td>
+<td class="col-result">Prevención de caídas</td>
+<td class="col-code">6490</td>
+</tr>
+<tr>
+<td class="col-main">Deterioro de la integridad cutánea</td>
+<td class="col-code">00046</td>
+<td class="col-result">Integridad tisular</td>
+<td class="col-code">1101</td>
+<td class="col-result">Cuidados de la piel</td>
+<td class="col-code">3584</td>
+</tr>
+<tr>
+<td class="col-main">Ansiedad</td>
+<td class="col-code">00146</td>
+<td class="col-result">Nivel de ansiedad</td>
+<td class="col-code">1211</td>
+<td class="col-result">Disminución de ansiedad</td>
+<td class="col-code">5820</td>
+</tr>
+</tbody>
+</table>
+<h3>3️⃣ Mapa Mental – Teorías de Enfermería</h3>
+<div class="highlight">Resumen para memorizar rápido</div>
+<h4>Florence Nightingale – Teoría ambientalista</h4>
+<p>El entorno influye en la salud.</p>
+<ul>
+<li>Higiene</li>
+<li>Ventilación</li>
+<li>Luz</li>
+<li>Silencio</li>
+<li>Agua potable</li>
+</ul>
+<p><strong>Objetivo:</strong> Favorecer recuperación mediante control del ambiente.</p>
+<h4>Virginia Henderson – Teoría de las 14 necesidades humanas</h4>
+<p>La enfermería ayuda al paciente a lograr independencia.</p>
+<ul>
+<li>Rol enfermero: sustituto</li>
+<li>Ayudante</li>
+<li>Compañero</li>
+</ul>
+<div class="highlight">Base conceptual del PAE moderno.</div>
+<h4>Dorothea Orem – Teoría del autocuidado</h4>
+<p>Las personas pueden cuidarse a sí mismas. Cuando no pueden → interviene enfermería.</p>
+<ul>
+<li>Totalmente compensador</li>
+<li>Parcialmente compensador</li>
+<li>Apoyo-educación</li>
+</ul>
+<h4>Hildegard Peplau – Teoría interpersonal</h4>
+<p>Enfermería basada en la relación terapéutica.</p>
+<ul>
+<li>Orientación</li>
+<li>Identificación</li>
+<li>Aprovechamiento</li>
+<li>Resolución</li>
+</ul>
+<div class="highlight">Muy utilizada en salud mental.</div>
+<h4>Callista Roy – Modelo de adaptación</h4>
+<p>El paciente es un sistema adaptativo.</p>
+<ul>
+<li>Fisiológico</li>
+<li>Autoconcepto</li>
+<li>Rol social</li>
+<li>Interdependencia</li>
+</ul>
+<p><strong>Objetivo:</strong> Lograr adaptación saludable.</p>
+<h3>4️⃣ Modelo de PAE para presentar (APS y Hospital)</h3>
+<p>Este esquema sirve para trabajos o exposición.</p>
+<h4>PAE en APS (Atención Primaria de Salud)</h4>
+<ul>
+<li><strong>Valoración:</strong> Familia con factores de riesgo (HTA, sedentarismo, mala alimentación).</li>
+<li><strong>Diagnóstico NANDA:</strong> 00078 Manejo ineficaz de la salud.</li>
+<li><strong>NOC:</strong> 1601 Conducta de cumplimiento.</li>
+<li><strong>NIC:</strong> 5602 Enseñanza: proceso de enfermedad.</li>
+<li><strong>Actividades:</strong> educación sobre HTA, promoción de dieta saludable, fomentar actividad física.</li>
+</ul>
+<h4>PAE Hospitalario</h4>
+<ul>
+<li><strong>Paciente:</strong> Internado con diabetes descompensada.</li>
+<li><strong>Valoración:</strong> glucemia elevada, poliuria, polidipsia.</li>
+<li><strong>Diagnóstico NANDA:</strong> 00179 Riesgo de nivel de glucosa inestable.</li>
+<li><strong>NOC:</strong> 1612 Control de la glucemia.</li>
+<li><strong>NIC:</strong> 2120 Manejo de la hiperglucemia.</li>
+<li><strong>Actividades:</strong> control glucémico, administración de insulina, educación diabetológica.</li>
+</ul>
+<h3>Frase clave para cerrar un final</h3>
+<div class="highlight">El Proceso de Atención de Enfermería constituye el método científico de la profesión, permitiendo brindar cuidados individualizados, sistemáticos y basados en evidencia, orientados a satisfacer las necesidades humanas y promover la autonomía del paciente.</div>
+<h3>1️⃣ Los 25 diagnósticos NANDA más preguntados en Adulto y Anciano</h3>
+<p>Estos diagnósticos aparecen muy frecuentemente en clínica médica, geriatría, APS y hospital.</p>
+<h3 class="table-subtitle">Relación entre diagnóstico, código y función</h3>
+<div class="simple-table-wrap">
+<table class="simple-table">
+<thead>
+<tr>
+<th>Diagnóstico NANDA</th>
+<th>Código</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="label">Dolor agudo</td>
+<td class="code">00132</td>
+<td class="function">dolor agudo</td>
+</tr>
+<tr>
+<td class="label">Dolor crónico</td>
+<td class="code">00133</td>
+<td class="function">enfermedades degenerativas</td>
+</tr>
+<tr>
+<td class="label">Patrón respiratorio ineficaz</td>
+<td class="code">00032</td>
+<td class="function">neumonía, EPOC</td>
+</tr>
+<tr>
+<td class="label">Limpieza ineficaz de vías aéreas</td>
+<td class="code">00031</td>
+<td class="function">infecciones respiratorias</td>
+</tr>
+<tr>
+<td class="label">Intercambio gaseoso deteriorado</td>
+<td class="code">00030</td>
+<td class="function">insuficiencia respiratoria</td>
+</tr>
+<tr>
+<td class="label">Intolerancia a la actividad</td>
+<td class="code">00092</td>
+<td class="function">cardiopatías, EPOC</td>
+</tr>
+<tr>
+<td class="label">Fatiga</td>
+<td class="code">00093</td>
+<td class="function">enfermedades crónicas</td>
+</tr>
+<tr>
+<td class="label">Déficit de autocuidado: baño</td>
+<td class="code">00108</td>
+<td class="function">adulto mayor</td>
+</tr>
+<tr>
+<td class="label">Déficit de autocuidado: vestido</td>
+<td class="code">00109</td>
+<td class="function">dependencia</td>
+</tr>
+<tr>
+<td class="label">Déficit de autocuidado: alimentación</td>
+<td class="code">00102</td>
+<td class="function">debilidad</td>
+</tr>
+<tr>
+<td class="label">Deterioro de la movilidad física</td>
+<td class="code">00085</td>
+<td class="function">ACV, fracturas</td>
+</tr>
+<tr>
+<td class="label">Riesgo de caídas</td>
+<td class="code">00155</td>
+<td class="function">geriatría</td>
+</tr>
+<tr>
+<td class="label">Deterioro de la integridad cutánea</td>
+<td class="code">00046</td>
+<td class="function">úlceras por presión</td>
+</tr>
+<tr>
+<td class="label">Riesgo de deterioro de la piel</td>
+<td class="code">00047</td>
+<td class="function">pacientes inmovilizados</td>
+</tr>
+<tr>
+<td class="label">Riesgo de infección</td>
+<td class="code">00004</td>
+<td class="function">hospitalización</td>
+</tr>
+<tr>
+<td class="label">Termorregulación ineficaz</td>
+<td class="code">00007</td>
+<td class="function">infecciones</td>
+</tr>
+<tr>
+<td class="label">Nutrición desequilibrada</td>
+<td class="code">00002</td>
+<td class="function">desnutrición</td>
+</tr>
+<tr>
+<td class="label">Exceso de volumen de líquidos</td>
+<td class="code">00026</td>
+<td class="function">insuficiencia cardíaca</td>
+</tr>
+<tr>
+<td class="label">Déficit de volumen de líquidos</td>
+<td class="code">00027</td>
+<td class="function">deshidratación</td>
+</tr>
+<tr>
+<td class="label">Ansiedad</td>
+<td class="code">00146</td>
+<td class="function">hospitalización</td>
+</tr>
+<tr>
+<td class="label">Confusión aguda</td>
+<td class="code">00128</td>
+<td class="function">delirium</td>
+</tr>
+<tr>
+<td class="label">Trastorno del patrón del sueño</td>
+<td class="code">00198</td>
+<td class="function">hospital</td>
+</tr>
+<tr>
+<td class="label">Estreñimiento</td>
+<td class="code">00011</td>
+<td class="function">adulto mayor</td>
+</tr>
+<tr>
+<td class="label">Riesgo de glucemia inestable</td>
+<td class="code">00179</td>
+<td class="function">diabetes</td>
+</tr>
+<tr>
+<td class="label">Manejo ineficaz de la salud</td>
+<td class="code">00078</td>
+<td class="function">APS</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>2️⃣ Súper cuadro: 14 necesidades de Henderson + diagnósticos NANDA</h3>
+<h3 class="table-subtitle">Necesidades básicas y diagnósticos NANDA</h3>
+<div class="need-table-wrap">
+<table class="need-table">
+<thead>
+<tr>
+<th>Necesidad básica</th>
+<th>Ejemplos de diagnósticos NANDA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Respirar normalmente</td>
+<td class="right">00032 Patrón respiratorio ineficaz / 00030 Intercambio gaseoso deteriorado</td>
+</tr>
+<tr>
+<td class="left">Comer y beber adecuadamente</td>
+<td class="right">00002 Nutrición desequilibrada / 00027 Déficit de volumen de líquidos</td>
+</tr>
+<tr>
+<td class="left">Eliminar desechos</td>
+<td class="right">00011 Estreñimiento / 00016 Deterioro de la eliminación urinaria</td>
+</tr>
+<tr>
+<td class="left">Moverse y mantener postura</td>
+<td class="right">00085 Deterioro de movilidad física / 00092 Intolerancia a la actividad</td>
+</tr>
+<tr>
+<td class="left">Dormir y descansar</td>
+<td class="right">00198 Trastorno del patrón del sueño</td>
+</tr>
+<tr>
+<td class="left">Vestirse y desvestirse</td>
+<td class="right">00109 Déficit de autocuidado: vestido</td>
+</tr>
+<tr>
+<td class="left">Mantener temperatura corporal</td>
+<td class="right">00007 Termorregulación ineficaz</td>
+</tr>
+<tr>
+<td class="left">Mantener higiene e integridad de la piel</td>
+<td class="right">00046 Deterioro de la integridad cutánea / 00047 Riesgo de deterioro cutáneo</td>
+</tr>
+<tr>
+<td class="left">Evitar peligros</td>
+<td class="right">00155 Riesgo de caídas / 00004 Riesgo de infección</td>
+</tr>
+<tr>
+<td class="left">Comunicarse</td>
+<td class="right">00051 Deterioro de la comunicación verbal</td>
+</tr>
+<tr>
+<td class="left">Vivir según valores y creencias</td>
+<td class="right">00066 Sufrimiento espiritual</td>
+</tr>
+<tr>
+<td class="left">Trabajar y sentirse realizado</td>
+<td class="right">00054 Riesgo de soledad</td>
+</tr>
+<tr>
+<td class="left">Recrearse</td>
+<td class="right">00097 Déficit de actividades recreativas</td>
+</tr>
+<tr>
+<td class="left">Aprender</td>
+<td class="right">00126 Conocimientos deficientes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Este cuadro integra modelo conceptual de Virginia Henderson con diagnósticos enfermeros.</p>
+<p><em>Cómo usar este cuadro en un examen oral:</em> “Para la valoración del paciente utilizo el modelo de las 14 necesidades de Henderson, que permite identificar alteraciones en funciones básicas como respiración, nutrición, eliminación y movilidad, facilitando la formulación de diagnósticos NANDA que orientan el plan de cuidados dentro del Proceso de Atención de Enfermería.”</p>
+</div></section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 4 – CONOCIENDO EL MEDIO INTERNO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Guyton &amp; Hall: Tratado de Fisiología Médica; Henderson, V: La naturaleza de la enfermería; Smeltzer &amp; Bare: Brunner y Suddarth Enfermería Medicoquirúrgica; NANDA-NIC-NOC.</p>
+<h3>Definición de Medio Interno</h3><div class="image-placeholder float-right tall">
+  <img src="Body Fluids and Fluid Compartments _ Anatomy and Physiology II.jpg" alt="">
+</div>
+<p>El medio interno es el conjunto de líquidos que rodean y bañan a todas las células del organismo, principalmente el líquido extracelular (LEC). Incluye plasma sanguíneo, líquido intersticial y líquido transcelular.</p>
+<h3>Concepto fisiológico (Guyton y Hall)</h3>
+<p>El medio interno es el entorno químico y físico en el que viven las células, cuya composición debe mantenerse relativamente constante gracias a la homeostasis.</p>
+<h3>Características clave</h3>
+<ul>
+<li>Contiene nutrientes, oxígeno, electrolitos y sustancias químicas necesarias.</li>
+<li>Permite la eliminación de productos de desecho.</li>
+<li>Su estabilidad es esencial para órganos y sistemas.</li>
+</ul>
+<h3>Importancia para Enfermería</h3>
+<p>Comprender el medio interno permite identificar alteraciones hidroelectrolíticas, ácido–base, hemodinámicas y respiratorias.</p>
+<h3>1. Homeostasis</h3><div class="image-placeholder bg-slot">
+  <img src="12.png" alt="">
+</div>
+<p>Procesos fisiológicos que mantienen constante el medio interno (pH, temperatura, osmolaridad, presión arterial, electrolitos, glucosa).</p>
+<ul>
+<li>Receptores → detectan cambios.</li>
+<li>Centro integrador → SNC o sistema endocrino.</li>
+<li>Efectores → órganos que corrigen la alteración.</li>
+</ul>
+<h3>2. Comunicación intercelular</h3>
+<p>Proceso por el cual las células coordinan funciones para mantener la homeostasis.</p>
+<ul>
+<li>Autocrina</li>
+<li>Paracrina</li>
+<li>Endocrina</li>
+<li>Neuronal</li>
+<li>Yuxtacrina</li>
+</ul>
+<h3>3. Equilibrio ácido-base</h3><div class="image-placeholder float-right compact">
+  <img src="13.png" alt="">
+</div>
+<p>Regulación del pH entre 7.35 y 7.45 mediante sistemas amortiguadores, regulación respiratoria y renal.</p>
+<ul>
+<li>Acidosis metabólica / respiratoria</li>
+<li>Alcalosis metabólica / respiratoria</li>
+</ul>
+<h3>4. Mecanismo de Frank-Starling</h3>
+<p>El corazón regula automáticamente su fuerza de contracción en función del volumen de llenado ventricular.</p>
+<div class="highlight">En insuficiencia cardíaca la curva se aplana → el corazón no puede aumentar su gasto aunque aumente la precarga.</div>
+
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 5 – PAE EN LOS GRANDES DESEQUILIBRIOS DEL MEDIO INTERNO</h2>
+<h3>1️⃣ Trastornos Ácido–Base</h3>
+<p><strong>Definición:</strong> Alteraciones del pH sanguíneo (&lt;7,35 acidosis / &gt;7,45 alcalosis).</p>
+<p><strong>Etiología:</strong> Metabólica (IRC, cetoacidosis), Respiratoria (EPOC, ansiedad).</p>
+<p><strong>Manifestaciones:</strong> Acidosis → respiración profunda, confusión. Alcalosis → parestesias, arritmias.</p>
+<p><strong>Diagnóstico:</strong> Gasometría arterial.</p>
+<p><strong>Plan de cuidados:</strong> NANDA: Deterioro del intercambio gaseoso. NIC: Monitorización respiratoria. NOC: Estado ácido-base equilibrado.</p>
+<h3>2️⃣ Alteraciones Hidroelectrolíticas</h3>
+<h4>Sodio (Na⁺)</h4>
+<p><strong>Hiponatremia:</strong> Confusión, convulsiones. Tratamiento: restricción hídrica, solución salina hipertónica.</p>
+<p><strong>Hipernatremia:</strong> Sed intensa, letargo. Tratamiento: reposición hídrica lenta.</p>
+<h4>Potasio (K⁺)</h4>
+<p><strong>Hipokalemia:</strong> Debilidad, arritmias. Tratamiento: cloruro de potasio.</p>
+<p><strong>Hiperkalemia:</strong> Riesgo de fibrilación ventricular. Tratamiento: gluconato de calcio, insulina + glucosa, diálisis.</p>
+<h4>Calcio (Ca²⁺)</h4>
+<p><strong>Hipocalcemia:</strong> Tetania, convulsiones. Tratamiento: gluconato de calcio EV.</p>
+<p><strong>Hipercalcemia:</strong> Letargo, litiasis renal. Tratamiento: hidratación EV + diuréticos.</p>
+<h4>Magnesio (Mg²⁺)</h4>
+<p><strong>Hipomagnesemia:</strong> Temblor, arritmias. Tratamiento: sulfato de magnesio EV.</p>
+<p><strong>Hipermagnesemia:</strong> Hiporreflexia, depresión respiratoria. Tratamiento: gluconato de calcio + diálisis.</p>
+<h3>3️⃣ Alteraciones del Balance Hídrico</h3>
+<p><strong>Definición:</strong> Desequilibrio entre ingresos y pérdidas de agua corporal.</p>
+<p><strong>Manifestaciones:</strong> Deshidratación → piel seca, hipotensión. Sobrecarga → edemas, disnea.</p>
+<p><strong>Plan de cuidados:</strong> NANDA: Déficit/exceso de volumen de líquidos. NIC: Manejo de líquidos. NOC: Hidratación adecuada.</p>
+<h3>4️⃣ Alteraciones del Metabolismo Glucídico</h3>
+<p><strong>Definición:</strong> Alteraciones en la regulación de la glucosa sanguínea.</p>
+<p><strong>Manifestaciones:</strong> Poliuria, polidipsia, sudoración, confusión.</p>
+<p><strong>Plan de cuidados:</strong> NANDA: Nivel de glucemia inestable. NIC: Monitorización glucémica. NOC: Control metabólico adecuado.</p>
+<h3>5️⃣ Trastornos de la Osmolaridad</h3>
+<p><strong>Definición:</strong> Alteraciones en la concentración de solutos plasmáticos.</p>
+<p><strong>Manifestaciones:</strong> Alteración del sensorio, convulsiones.</p>
+<p><strong>Plan de cuidados:</strong> NANDA: Riesgo de desequilibrio de volumen de líquidos. NIC: Monitorización neurológica. NOC: Equilibrio hídrico y osmolar estable.</p>
+<h3 class="table-subtitle">Relación NANDA – NOC – NIC</h3>
+<div class="clinical-table-wrap">
+<table class="clinical-table">
+<thead>
+<tr>
+<th>NANDA (Diagnóstico)</th>
+<th>NOC (Resultado esperado)</th>
+<th>NIC (Intervenciones de Enfermería)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          Déficit de volumen de líquidos r/c pérdida excesiva m/p mucosas secas
+        </td>
+<td>
+          Equilibrio hídrico: El paciente recuperará la humedad de mucosas en 24h.
+        </td>
+<td>
+          Monitorización de SV; Balance hídrico estricto; Control de turgencia cutánea.
+        </td>
+</tr>
+<tr>
+<td>
+          Riesgo de nivel de glucemia inestable r/c falta de adherencia terapéutica.
+        </td>
+<td>
+          Conocimiento: Manejo de la diabetes.
+        </td>
+<td>
+          Enseñanza del proceso de enfermedad; Monitorización de glucemia capilar (HGT).
+        </td>
+</tr>
+<tr>
+<td>
+          Riesgo de caída r/c debilidad muscular (por hipopotasemia).
+        </td>
+<td>
+          Conducta de seguridad: Prevención de caídas.
+        </td>
+<td>
+          Vigilancia de la deambulación; Mantener barandas elevadas; Asegurar iluminación.
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="image-placeholder bg-slot">
+  <img src="e7299835-57cf-48eb-9968-ed2abe0bc1a4.png" alt="">
+</div>
+<h3>Resumen para no olvidar</h3>
+<div class="highlight">
+    El LEC es el “medio interno” donde se encuentran las células; su catión principal es el Na⁺.<br/>
+    El LIC es el líquido dentro de las células; su catión principal es el K⁺.<br/>
+    Ambos deben mantener la misma osmolaridad para evitar que la célula se hinche o se deshidrate.<br/>
+    La bomba Na⁺/K⁺ ATPasa mantiene la distribución de iones y el volumen celular.
+  </div>
+
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 6 – ANATOMOFISIOLOGÍA DEL SNC Y SENSIBILIDAD</h2>
+<p><strong>Referencia Bibliográfica:</strong> Snell, R. Neuroanatomía Clínica; Guyton &amp; Hall: Tratado de Fisiología Médica; Netter, F. Atlas de Anatomía Humana; NANDA-NIC-NOC.</p>
+<h3>1. ¿Qué es el sistema nervioso?</h3>
+<p>El sistema nervioso es el sistema encargado de recibir información del cuerpo y del entorno, interpretarla y generar respuestas. Es el centro de control del organismo.</p>
+<ul>
+<li>Sentir dolor, frío o calor</li>
+<li>Movernos</li>
+<li>Pensar y recordar</li>
+<li>Mantener el equilibrio</li>
+<li>Controlar la respiración y el corazón</li>
+</ul>
+<p>Para enfermería, comprender cómo funciona es fundamental porque muchas enfermedades afectan el sistema nervioso y cambian la forma en que el paciente se mueve, siente o se comunica.</p>
+<div class="highlight">Cuando el sistema nervioso se altera, la independencia del paciente puede verse comprometida, por lo que el rol de enfermería es clave.</div>
+<h3>2. ¿Cómo se divide el sistema nervioso?</h3>
+<h4>Sistema Nervioso Central (SNC)</h4>
+<p>Centro principal de procesamiento, formado por encéfalo y médula espinal.</p>
+<h4>Sistema Nervioso Periférico (SNP)</h4>
+<p>Formado por nervios que conectan el cerebro con todo el cuerpo. Permite movimiento, sensibilidad y regulación de órganos.</p>
+<h3>3. Repaso rápido de las estructuras principales</h3>
+<h4>Cerebro</h4>
+<p>Funciones: pensamiento, memoria, emociones, movimiento, interpretación de la sensibilidad.</p>
+<ul>
+<li>Lóbulo frontal: conducta, planificación, movimiento voluntario</li>
+<li>Lóbulo parietal: sensibilidad corporal</li>
+<li>Lóbulo temporal: audición, memoria</li>
+<li>Lóbulo occipital: visión</li>
+</ul>
+<h4>Cerebelo</h4>
+<p>Funciones: coordinación de movimientos, equilibrio, precisión motora.</p>
+<p>Alteraciones: torpeza, pérdida de equilibrio, dificultad para coordinar movimientos.</p>
+<h4>Tronco encefálico</h4>
+<p>Controla funciones vitales automáticas: respiración, presión arterial, frecuencia cardíaca.</p>
+<h4>Médula espinal</h4>
+<p>Transmite información entre cerebro y cuerpo. Actúa como centro de reflejos (ejemplo: retirar la mano al tocar algo caliente).</p>
+<h3>4. Vías nerviosas importantes</h3><div class="image-placeholder float-right compact">
+<img src="uni61.png" alt="">
+</div>
+<h4>Sistema espinotalámico</h4>
+<p>Transmite dolor, temperatura y tacto grosero.</p>
+<h4>Sistema de los cordones posteriores (Goll y Burdach)</h4>
+<p>Transporta tacto fino, vibración y posición del cuerpo.</p>
+<h3>5. Receptores sensoriales</h3>
+<ul>
+<li><strong>Barorreceptores:</strong> detectan cambios en presión arterial.</li>
+<li><strong>Termorreceptores y nociceptores:</strong> detectan frío, calor y dolor.</li>
+</ul>
+<h3>6. Pares craneales</h3><div class="image-placeholder float-right tall">
+  <img src="uni62.png" alt="">
+</div>
+<p>Son 12 pares de nervios que controlan funciones de cabeza, cuello y algunos órganos.</p>
+<h3 class="table-subtitle">Pares craneales y función</h3>
+<div class="cranial-table-wrap">
+<table class="cranial-table">
+<thead>
+<tr>
+<th>Par</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">I</td>
+<td class="right">Olfato</td>
+</tr>
+<tr>
+<td class="left">II</td>
+<td class="right">Visión</td>
+</tr>
+<tr>
+<td class="left">III, IV, VI</td>
+<td class="right">Movimientos de los ojos</td>
+</tr>
+<tr>
+<td class="left">V</td>
+<td class="right">Sensibilidad de la cara</td>
+</tr>
+<tr>
+<td class="left">VII</td>
+<td class="right">Expresión facial</td>
+</tr>
+<tr>
+<td class="left">VIII</td>
+<td class="right">Audición y equilibrio</td>
+</tr>
+<tr>
+<td class="left">IX</td>
+<td class="right">Deglución</td>
+</tr>
+<tr>
+<td class="left">X</td>
+<td class="right">Control de órganos internos</td>
+</tr>
+<tr>
+<td class="left">XI</td>
+<td class="right">Movimiento del cuello</td>
+</tr>
+<tr>
+<td class="left">XII</td>
+<td class="right">Movimiento de la lengua</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3>7. Importancia para enfermería</h3>
+<p>El sistema nervioso participa en funciones esenciales del paciente. En la valoración de enfermería se observan:</p>
+<ul>
+<li>Nivel de conciencia</li>
+<li>Orientación</li>
+<li>Movilidad</li>
+<li>Sensibilidad</li>
+<li>Lenguaje</li>
+<li>Coordinación</li>
+</ul>
+<h3>8. Idea clave para recordar</h3>
+<div class="highlight">El sistema nervioso coordina, integra y regula todas las funciones del organismo, permitiendo que la persona interactúe con su entorno y mantenga su independencia.</div>
+<div class="image-placeholder float-right compact">
+  <img src="uni63.png" alt="">
+</div>
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 7 – PAE NEUROPATÍAS Y ACV</h2>
+<p><strong>Referencia Bibliográfica:</strong> Brunner y Suddarth: Enfermería Medicoquirúrgica; Snell, R. Neuroanatomía Clínica; Guía de Manejo del ACV (AHA/ASA); NANDA-NIC-NOC.</p>
+<h3>1. Accidente Cerebrovascular (ACV): El Tiempo es Cerebro</h3>
+<p>El ACV es la interrupción del flujo sanguíneo a una parte del cerebro, privando a las neuronas de oxígeno y glucosa.</p>
+<ul>
+<li><strong>ACV Isquémico (85%):</strong> trombo o émbolo que obstruye una arteria.</li>
+<li><strong>ACV Hemorrágico (15%):</strong> ruptura de un vaso sanguíneo, generando hematoma.</li>
+</ul>
+<div class="highlight">Fisiopatología: cascada isquémica con núcleo de necrosis y zona de penumbra aún rescatable. Valoración rápida (Escala de Cincinnati) salva vidas.</div>
+<h3>2. Neuropatías Periféricas: La Falla en el Cableado</h3>
+<p>Trastornos que afectan nervios fuera del SNC. Ejemplo: Neuropatía diabética.</p>
+<p><strong>Clínica:</strong> dolor en “guante o calcetín”, parestesias, anestesia, riesgo de pie diabético.</p>
+<h3>3. Alteraciones de Pares Craneales y Nervios Espinales</h3>
+<ul>
+<li><strong>Parálisis de Bell (VII):</strong> asimetría facial súbita.</li>
+<li><strong>Neuralgia del Trigémino (V):</strong> dolor lancinante en rostro.</li>
+<li><strong>Disfagia (IX y X):</strong> riesgo de aspiración y neumonía.</li>
+</ul>
+<h3>Proceso de Atención de Enfermería (PAE)</h3>
+<p>Siguiendo a Virginia Henderson, estas patologías afectan la necesidad de moverse y comunicarse.</p>
+<h4>Diagnósticos NANDA</h4>
+<ul>
+<li>(00201) Riesgo de perfusión tisular cerebral ineficaz.</li>
+<li>(00051) Deterioro de la comunicación verbal.</li>
+<li>(00155) Riesgo de caídas.</li>
+</ul>
+<h4>Intervenciones NIC</h4>
+<ul>
+<li>(2620) Monitorización neurológica.</li>
+<li>(0840) Cambio de posición.</li>
+<li>(1860) Terapia de tragado.</li>
+</ul>
+<h4>Resultados NOC</h4>
+<ul>
+<li>(0406) Perfusión tisular: cerebral.</li>
+<li>(0900) Capacidad cognitiva.</li>
+</ul>
+<h3>Polineuropatías en el Adulto y Anciano</h3>
+<h4>1. Neuropatía Diabética</h4>
+<p>Complicación microvascular crónica de la diabetes. Clínica: parestesias, dolor quemante, pérdida de sensibilidad protectora.</p>
+<p><strong>PAE:</strong> NANDA (00047) Riesgo de deterioro de la integridad cutánea. NIC (3590) Vigilancia de la piel. NOC (1101) Integridad tisular.</p>
+<h4>2. Síndrome de Guillain-Barré</h4>
+<p>Polineuropatía desmielinizante aguda autoinmune. Clínica: parálisis ascendente, arreflexia, posible fallo respiratorio.</p>
+<p><strong>PAE:</strong> NANDA (00032) Patrón respiratorio ineficaz. NIC (3350) Monitorización respiratoria. NOC (0403) Estado respiratorio.</p>
+<h4>3. Neuropatía Alcohólica</h4>
+<p>Daño nervioso periférico por consumo crónico de alcohol. Clínica: debilidad muscular distal, calambres, dolor en piernas.</p>
+<p><strong>PAE:</strong> NANDA (00085) Deterioro de la movilidad física. NIC (0221) Terapia de ejercicios. NOC (0208) Movilidad.</p>
+<h4>4. Síndrome del Túnel Carpiano</h4>
+<p>Compresión del nervio mediano en la muñeca. Clínica: parestesias nocturnas, debilidad en pinza pulgar.</p>
+<p><strong>PAE:</strong> NANDA (00132) Dolor agudo. NIC (1400) Manejo del dolor. NOC (1605) Control del dolor.</p>
+<h4>5. Neuropatía Urémica</h4>
+<p>Afectación nerviosa distal secundaria a insuficiencia renal crónica. Clínica: piernas inquietas, debilidad motora.</p>
+<p><strong>PAE:</strong> NANDA (00298) Disminución de la tolerancia a la actividad. NIC (4310) Terapia de actividad. NOC (0005) Tolerancia a la actividad.</p>
+<h4>6. Neuropatía por Déficit de Vitamina B12</h4>
+<p>Degeneración nerviosa por carencia de cobalamina. Clínica: glositis, ataxia, parestesias simétricas.</p>
+<p><strong>PAE:</strong> NANDA (00155) Riesgo de caídas. NIC (6490) Prevención de caídas. NOC (1909) Conducta de prevención de caídas.</p>
+<h3>Educación y Cuidado Ético</h3>
+<div class="highlight">En el paciente neurológico, la paciencia es nuestra mejor técnica. Debemos educar a la familia sobre rehabilitación temprana y manejo de secuelas emocionales, respetando la dignidad del paciente.</div>
+<div class="image-placeholder float-left compact">
+  <img src="uni71.png" alt="">
+</div>
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 8 – PAE EN EL DOLOR</h2>
+<h3>1️⃣ Definición de Dolor</h3>
+<p><strong>IASP:</strong> experiencia sensorial y emocional desagradable asociada a daño tisular real o potencial.</p>
+<p><strong>Henderson:</strong> el dolor altera necesidades de descanso, movimiento, seguridad, comunicación y aprendizaje, afectando la independencia del paciente.</p>
+<h3>2️⃣ Tipos y Características del Dolor</h3>
+<h4>Según duración</h4>
+<ul>
+<li>Agudo: inicio súbito, causa identificable, función protectora.</li>
+<li>Crónico: &gt;3 meses, pierde función protectora, impacto psicosocial.</li>
+</ul>
+<h4>Según mecanismo</h4>
+<ul>
+<li>Nociceptivo: somático (localizado), visceral (difuso).</li>
+<li>Neuropático: quemante, eléctrico.</li>
+<li>Mixto.</li>
+</ul>
+<h4>Según intensidad</h4>
+<p>Leve – Moderado – Severo.</p>
+<h3>3️⃣ Etiología</h3>
+<ul>
+<li>Postquirúrgico</li>
+<li>Traumático</li>
+<li>Inflamatorio</li>
+<li>Oncológico</li>
+<li>Degenerativo (artrosis)</li>
+<li>Neuropático (diabetes, ACV)</li>
+</ul>
+<h3>4️⃣ Epidemiología</h3>
+<p>Alta prevalencia en adultos mayores. Dolor crónico afecta &gt;50% de ancianos institucionalizados. Frecuente en enfermedades crónicas.</p>
+<h3>Fisiopatología del Dolor</h3>
+<h4>Etapas</h4>
+<ul>
+<li>Transducción</li>
+<li>Transmisión</li>
+<li>Modulación</li>
+<li>Percepción</li>
+</ul>
+<h4>Transducción</h4>
+<p>Conversión del estímulo nocivo en impulso eléctrico. Sustancias: prostaglandinas, bradicinina, sustancia P, histamina, serotonina.</p>
+<h4>Transmisión</h4>
+<p>Viaje por fibras A-delta (dolor agudo) y C (dolor lento). Recorrido: receptor → médula espinal → tálamo → corteza.</p>
+<h4>Modulación</h4>
+<p>Inhibición (endorfinas, serotonina) o amplificación del dolor. Teoría del “gate control”.</p>
+<h4>Percepción</h4>
+<p>Experiencia consciente en corteza cerebral: sensorial, emocional, cognitiva.</p>
+<h3>Diferencias Fisiopatológicas</h3>
+<ul>
+<li><strong>Dolor agudo:</strong> protector, respuesta simpática, cede al resolver causa.</li>
+<li><strong>Dolor crónico:</strong> sensibilización periférica y central, hiperalgesia, alodinia.</li>
+<li><strong>Dolor neuropático:</strong> lesión nerviosa, descargas eléctricas espontáneas, quemazón, hormigueo.</li>
+</ul>
+<h3>Particularidades en el Adulto Mayor</h3>
+<p>Menor respuesta inflamatoria, mayor riesgo de dolor crónico. Puede manifestarse como confusión, inmovilidad, aislamiento.</p>
+<h3>Cómo decirlo en el oral</h3>
+<div class="highlight">El dolor se inicia con la transducción del estímulo nocivo en los nociceptores, se transmite por fibras A-delta y C hacia la médula espinal, donde es modulado, y finalmente es percibido en la corteza cerebral. En el dolor crónico se produce sensibilización periférica y central.</div>
+<h3>6️⃣ Manifestaciones Clínicas</h3>
+<ul>
+<li>Verbalización del dolor</li>
+<li>Cambios conductuales</li>
+<li>Taquicardia</li>
+<li>Hipertensión</li>
+<li>Insomnio</li>
+<li>Irritabilidad</li>
+<li>En ancianos: confusión o agitación</li>
+</ul>
+<h3>7️⃣ Escalas de Valoración</h3>
+<ul>
+<li>EVA (Visual Analógica)</li>
+<li>Escala Numérica</li>
+<li>Escala de caras (Wong-Baker)</li>
+<li>PAINAD (adultos mayores con deterioro cognitivo)</li>
+</ul>
+<h3>8️⃣ Diagnóstico</h3>
+<p>Clínico + valoración sistemática del dolor. Identificación de causa base.</p>
+<h3>9️⃣ Terapéutica Medicamentosa</h3>
+<p>Escalera analgésica OMS: AINEs/Paracetamol → Opioides débiles → Opioides mayores.</p>
+<p>Coanalgésicos: antidepresivos, anticonvulsivantes, corticoides, relajantes musculares, anestésicos locales, bifosfonatos.</p>
+<h3>Coanalgésicos</h3>
+<ul>
+<li><strong>Antidepresivos:</strong> amitriptilina, duloxetina. Indicados en neuropatía diabética, fibromialgia.</li>
+<li><strong>Anticonvulsivantes:</strong> gabapentina, pregabalina. Primera línea en dolor neuropático.</li>
+<li><strong>Corticoides:</strong> dexametasona, prednisona. Dolor oncológico, edema cerebral.</li>
+<li><strong>Relajantes musculares:</strong> baclofeno, tizanidina.</li>
+<li><strong>Anestésicos locales:</strong> lidocaína tópica.</li>
+<li><strong>Bifosfonatos:</strong> dolor óseo metastásico.</li>
+</ul>
+<h3>Consideraciones en el Adulto Mayor</h3>
+<p>Iniciar dosis baja, ajustar por función renal/hepática, vigilar sedación y riesgo de caídas, controlar interacciones.</p>
+<h3>Plan de Cuidados (Enfermería)</h3>
+<h4>NANDA</h4>
+<ul>
+<li>Dolor crónico</li>
+<li>Riesgo de caídas</li>
+<li>Patrón de sueño alterado</li>
+</ul>
+<h4>NIC</h4>
+<ul>
+<li>Administración de medicación</li>
+<li>Monitorización de efectos adversos</li>
+<li>Educación farmacológica</li>
+</ul>
+<h4>NOC</h4>
+<ul>
+<li>Nivel del dolor</li>
+<li>Adherencia al tratamiento</li>
+<li>Estado neurológico estable</li>
+</ul>
+<h3>Frase clave para el oral</h3>
+<div class="highlight">“Los coanalgésicos son fármacos adyuvantes que actúan principalmente modulando la transmisión neuronal o disminuyendo la inflamación, siendo fundamentales en el tratamiento del dolor neuropático y oncológico.”</div>
+<h3>Cuadro comparativo Analgésicos vs Coanalgésicos</h3>
+<h3 class="table-subtitle">Analgésicos vs Coanalgésicos</h3>
+<div class="compare-table-wrap">
+<table class="compare-table">
+<thead>
+<tr>
+<th></th>
+<th>Analgésicos</th>
+<th>Coanalgésicos (Adyuvantes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="label">Definición</td>
+<td class="col">Fármacos cuya finalidad principal es aliviar el dolor.</td>
+<td class="col">Fármacos cuyo objetivo primario no es analgésico, pero se utilizan para potenciar o tratar tipos específicos de dolor.</td>
+</tr>
+<tr>
+<td class="label">Rol terapéutico</td>
+<td class="col">Base del tratamiento según escalera OMS.</td>
+<td class="col">Complementan y potencian el tratamiento analgésico.</td>
+</tr>
+<tr>
+<td class="label">Indicación principal</td>
+<td class="col">Dolor agudo y crónico nociceptivo.</td>
+<td class="col">Dolor neuropático, oncológico, crónico refractario.</td>
+</tr>
+<tr>
+<td class="label">Mecanismo de acción</td>
+<td class="col">Inhiben síntesis de prostaglandinas o actúan sobre receptores opioides.</td>
+<td class="col">Modulan neurotransmisores, estabilizan membranas neuronales o reducen inflamación.</td>
+</tr>
+<tr>
+<td class="label">Tipos principales</td>
+<td class="col">
+          AINES (ibuprofeno) – Paracetamol – Opioides débiles (tramadol) – Opioides fuertes (morfina)
+        </td>
+<td class="col">
+          Antidepresivos (amitriptilina, duloxetina) – Anticonvulsivantes (gabapentina, pregabalina) – Corticoides – Relajantes musculares – Anestésicos locales
+        </td>
+</tr>
+<tr>
+<td class="label">Eficacia en dolor neuropático</td>
+<td class="col">Limitada cuando se usan solos.</td>
+<td class="col">Alta eficacia (especialmente anticonvulsivantes y antidepresivos).</td>
+</tr>
+<tr>
+<td class="label">Uso en adulto mayor</td>
+<td class="col">Ajustar dosis por función renal/hepática. Vigilar riesgo GI y depresión respiratoria (opioides).</td>
+<td class="col">Iniciar dosis bajas. Vigilar sedación, hipotensión y riesgo de caídas.</td>
+</tr>
+<tr>
+<td class="label">Efectos adversos frecuentes</td>
+<td class="col">AINES: gastritis, sangrado. Opioides: náuseas, estreñimiento, depresión respiratoria.</td>
+<td class="col">Sedación, mareos, hipotensión ortostática, alteraciones cognitivas.</td>
+</tr>
+<tr>
+<td class="label">Ejemplo clínico</td>
+<td class="col">Dolor postquirúrgico → AINE u opioide.</td>
+<td class="col">Neuropatía diabética → gabapentina + analgésico.</td>
+</tr>
+<tr>
+<td class="label">Intervención enfermera</td>
+<td class="col">Administración segura, control de signos vitales, evaluación de eficacia.</td>
+<td class="col">Monitorización de efectos adversos, educación farmacológica y prevención de caídas.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="image-placeholder bg-slot">
+  <img src="uni81.png" alt="">
+</div>
+</section>
+<div class="page-break"></div>
+<section class="unidad">
+<h2>UNIDAD Nº 9 – CONOCIENDO EL CENTRO QUIRÚRGICO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Fuller, J. Instrumentación Quirúrgica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Archundia, A. Educación Quirúrgica; NANDA-NIC-NOC.</p>
+<h3>Diseño del Quirófano</h3>
+<p>Área física destinada a intervenciones quirúrgicas bajo normas estrictas de asepsia.</p>
+<h4>Características estructurales</h4>
+<ul>
+<li>Zona restringida</li>
+<li>Presión positiva</li>
+<li>Temperatura: 18–22°C</li>
+<li>Humedad: 40–60%</li>
+<li>Iluminación cialítica</li>
+<li>Superficies lavables</li>
+</ul>
+<h4>Áreas</h4>
+<ul>
+<li>Negra (libre)</li>
+<li>Gris (semi restringida)</li>
+<li>Blanca (restringida)</li>
+</ul>
+<h3>Principios de Técnica Estéril</h3>
+<ul>
+<li>Lavado quirúrgico de manos</li>
+<li>Uso correcto de campos estériles</li>
+<li>No cruzar áreas estériles</li>
+<li>Esterilidad desde cintura a hombros y frente del campo</li>
+<li>Control de tiempos de exposición</li>
+</ul>
+<h3>Tipos de Cirugía</h3>
+<ul>
+<li>Según urgencia: electiva, urgente, emergente</li>
+<li>Según finalidad: diagnóstica, curativa, paliativa, reconstructiva</li>
+<li>Según riesgo: mayor, menor</li>
+</ul>
+<h3>Instrumental Quirúrgico</h3>
+<ul>
+<li>Corte: bisturí, tijeras (Mayo, Metzenbaum)</li>
+<li>Hemostasia: pinza Kelly, Crile, Mosquito</li>
+<li>Prensión: pinza Allis, pinza de disección</li>
+<li>Separación: separador Farabeuf, valvas</li>
+<li>Síntesis: portaagujas, suturas</li>
+</ul>
+<h3>Tiempos Quirúrgicos</h3>
+<ul>
+<li>Incisión</li>
+<li>Hemostasia</li>
+<li>Exposición</li>
+<li>Síntesis</li>
+</ul>
+<h3>Etapas del Perioperatorio</h3>
+<h4>Preoperatorio</h4>
+<p>Objetivos: preparación física y emocional, disminuir ansiedad, prevenir complicaciones.</p>
+<p>Intervenciones: valoración integral, ayuno, rasurado si corresponde, consentimiento informado, control de signos vitales.</p>
+<h4>Intraoperatorio</h4>
+<p>Control de posición quirúrgica, seguridad (checklist OMS), control de campos, registro de tiempos, conteo de gasas.</p>
+<h4>Postoperatorio tardío</h4>
+<p>Etapa de recuperación que comienza después de las primeras 24–48 horas y puede extenderse hasta el alta médica.</p>
+<p>Objetivos: consolidar recuperación, prevenir complicaciones, favorecer rehabilitación.</p>
+<h3>Fisiopatología del Postoperatorio Tardío</h3>
+<ul>
+<li><strong>Respuesta inflamatoria:</strong> activación de mediadores, vasodilatación, migración celular.</li>
+<li><strong>Cicatrización:</strong> fases inflamatoria, proliferativa y remodelación.</li>
+<li><strong>Cambios metabólicos:</strong> aumento consumo energético, liberación de hormonas del estrés, mayor utilización de proteínas.</li>
+</ul>
+<h3>Complicaciones Comunes</h3>
+<ul>
+<li>Infección del sitio quirúrgico</li>
+<li>Dehiscencia de la herida</li>
+<li>Trombosis venosa profunda</li>
+<li>Complicaciones respiratorias (atelectasia, neumonía)</li>
+<li>Alteraciones gastrointestinales (íleo paralítico, estreñimiento, náuseas)</li>
+</ul>
+<h3>Rol de Enfermería en el Postoperatorio Tardío</h3>
+<ul>
+<li>Control de signos vitales</li>
+<li>Valoración de la herida</li>
+<li>Control del dolor</li>
+<li>Movilización temprana</li>
+<li>Prevención de trombosis</li>
+<li>Control de la alimentación</li>
+<li>Educación al paciente y familia</li>
+</ul>
+<h3>Epidemiología en Adulto y Anciano</h3>
+<p>Cirugías frecuentes: colecistectomía, hernioplastia, reemplazo de cadera, cirugía cardiovascular, resección prostática, cirugía oncológica.</p>
+<div class="highlight">Mayor morbimortalidad en ancianos por comorbilidades, fragilidad y polifarmacia.</div>
+<h3>Control Postanestésico – Escala Aldrete</h3>
+<ul>
+<li>Control respiración</li>
+<li>Saturación O₂</li>
+<li>Presión arterial</li>
+<li>Náuseas y vómitos</li>
+<li>Dolor</li>
+<li>Diuresis</li>
+</ul>
+<div class="image-placeholder wide">
+  <img src="uni91.png" alt="">
+</div>
+<h3 class="table-subtitle">Interpretación</h3>
+<div class="interp-table-wrap">
+<table class="interp-table">
+<thead>
+<tr>
+<th>Puntaje</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="score">9 – 10 puntos</td>
+<td class="result">Alta de URPA</td>
+</tr>
+<tr>
+<td class="score">7 – 8 puntos</td>
+<td class="result">Observación</td>
+</tr>
+<tr>
+<td class="score">≤ 6 puntos</td>
+<td class="result">Continuar monitorización intensiva</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 10 – ANESTESIA Y ROL DE ENFERMERÍA EN URPA</h2>
+<p><strong>Referencia Bibliográfica:</strong> Fuller, J. Instrumentación Quirúrgica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Archundia, A. Educación Quirúrgica; NANDA-NIC-NOC.</p>
+<h3>Fundamentación fisiopatológica</h3>
+<p>La anestesia puede provocar:</p>
+<ul>
+<li>Depresión respiratoria</li>
+<li>Hipotensión</li>
+<li>Alteración del estado de conciencia</li>
+<li>Hipoxemia</li>
+<li>Déficit neuromuscular residual</li>
+</ul>
+<p>La escala permite evaluar la recuperación de: función respiratoria, estabilidad hemodinámica, función neurológica y oxigenación tisular.</p>
+<h3>Rol de Enfermería en la Aplicación</h3>
+<ul>
+<li>Valorar al ingreso a URPA</li>
+<li>Revalorar cada 5–15 minutos</li>
+<li>Registrar puntaje en historia clínica</li>
+<li>Detectar signos de alarma</li>
+<li>Informar al anestesista ante alteraciones</li>
+</ul>
+<h3>Signos de alarma postanestésicos</h3>
+<ul>
+<li>Saturación &lt; 90%</li>
+<li>Bradipnea</li>
+<li>Hipotensión severa</li>
+<li>Sangrado activo</li>
+<li>Alteración del sensorio</li>
+<li>Náuseas y vómitos persistentes</li>
+</ul>
+<h3>Diagnósticos NANDA frecuentes en URPA</h3>
+<ul>
+<li>Patrón respiratorio ineficaz</li>
+<li>Riesgo de aspiración</li>
+<li>Dolor agudo</li>
+<li>Riesgo de sangrado</li>
+<li>Riesgo de infección</li>
+</ul>
+<h3>Frase para oral</h3>
+<div class="highlight">“La Escala de Aldrete permite objetivar la recuperación postanestésica mediante la evaluación sistemática de la función respiratoria, hemodinámica y neurológica, garantizando la seguridad del paciente en el periodo inmediato.”</div>
+<h3>Educación al paciente y familia</h3>
+<ul>
+<li>Ejercicios respiratorios</li>
+<li>Movilización precoz</li>
+<li>Cuidado de herida</li>
+<li>Signos de alarma</li>
+<li>Adherencia al tratamiento</li>
+</ul>
+<h3>Plan de Cuidados – NANDA NIC NOC</h3>
+<h4>Ejemplo 1</h4>
+<p><strong>NANDA:</strong> Dolor agudo (00132)</p>
+<p><strong>NOC:</strong> Control del dolor (1605)</p>
+<p><strong>NIC:</strong> Manejo del dolor (1400), Administración de analgésicos (2210), Técnicas de relajación (6040).</p>
+<h4>Ejemplo 2</h4>
+<p><strong>NANDA:</strong> Deterioro de la movilidad física (00085)</p>
+<p><strong>NOC:</strong> Movilidad (0208)</p>
+<p><strong>NIC:</strong> Terapia de ejercicios (0221), Cambio de posición (0840), Ayuda con autocuidado (1800).</p>
+<h3>Actividades de Enfermería en Quirófano</h3>
+<h4>Enfermera Circulante Interna</h4>
+<p>Permanece dentro del quirófano, no integra campo estéril. Funciones: verificar identidad, checklist OMS, preparar sala, asistir equipo estéril, conteo de material, registrar eventos.</p>
+<h4>Enfermera Circulante Externa</h4>
+<p>Permanece fuera del quirófano. Funciones: gestionar insumos, controlar ingreso/egreso, coordinar comunicación, recibir paciente, supervisar bioseguridad.</p>
+<h4>Enfermera Instrumentista</h4>
+<p>Forma parte del campo estéril. Funciones: lavado quirúrgico, preparación mesa, pasar instrumental, mantener orden, conteo final, registrar material.</p>
+<h3 class="table-subtitle">Roles en el equipo quirúrgico</h3>
+<div class="role-table-wrap">
+<table class="role-table">
+<thead>
+<tr>
+<th>Rol</th>
+<th>Campo estéril</th>
+<th>Contacto con instrumental</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="role">Circulante interna</td>
+<td>No</td>
+<td>No</td>
+<td class="function">Seguridad y asistencia</td>
+</tr>
+<tr>
+<td class="role">Circulante externa</td>
+<td>No</td>
+<td>No</td>
+<td class="function">Logística</td>
+</tr>
+<tr>
+<td class="role">Instrumentista</td>
+<td>Sí</td>
+<td>Sí</td>
+<td class="function">Técnica estéril e instrumental</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Cirugía Ambulatoria</h3>
+<p>Definición: intervención quirúrgica programada con alta el mismo día.</p>
+<h4>Características</h4>
+<ul>
+<li>Baja o mediana complejidad</li>
+<li>Anestesia corta duración</li>
+<li>Recuperación rápida</li>
+<li>Bajo riesgo de complicaciones</li>
+</ul>
+<h4>Importancia en adulto y anciano</h4>
+<p>Disminuye riesgo de infecciones, reduce delirium, favorece recuperación en entorno familiar.</p>
+<h3>Criterios de selección</h3>
+<ul>
+<li>Estabilidad hemodinámica</li>
+<li>Buen control de comorbilidades</li>
+<li>ASA I–II</li>
+<li>Acompañante responsable</li>
+<li>Vivienda accesible</li>
+<li>Comprensión de indicaciones</li>
+</ul>
+<h3>Etapas del Proceso Enfermero</h3>
+<h4>Preoperatorio</h4>
+<p>Valoración integral, verificación ayuno, educación, control signos vitales, consentimiento informado.</p>
+<h4>Intraoperatorio</h4>
+<p>Checklist, posición adecuada, prevención hipotermia, control de tiempos.</p>
+<h4>Postoperatorio inmediato</h4>
+<p>Control respiratorio, saturación O₂, dolor, náuseas, sangrado, diuresis. Alta cuando Aldrete ≥ 9.</p>
+<h3>Complicaciones más frecuentes</h3>
+<ul>
+<li>Dolor mal controlado</li>
+<li>Hemorragia</li>
+<li>Infección del sitio quirúrgico</li>
+<li>Náuseas y vómitos</li>
+<li>Mareos / síncope</li>
+</ul>
+<h3>Terapéutica</h3>
+<ul>
+<li>Analgesia multimodal</li>
+<li>Antieméticos</li>
+<li>Antibióticos si corresponde</li>
+<li>Control glucémico en diabéticos</li>
+</ul>
+<h3>Educación al paciente y familia</h3>
+<ul>
+<li>Reposo relativo</li>
+<li>Cuidado de herida</li>
+<li>Signos de alarma</li>
+<li>Toma correcta de medicación</li>
+<li>No conducir 24 hs</li>
+<li>Acompañante obligatorio</li>
+</ul>
+<h3>Plan de Cuidados – Ejemplo integrador</h3>
+<p><strong>NANDA:</strong> Déficit de conocimiento relacionado con cuidados postquirúrgicos</p>
+<p><strong>NOC:</strong> Conocimiento: proceso terapéutico</p>
+<p><strong>NIC:</strong> Enseñanza procedimiento/tratamiento</p>
+<h3>Ventajas</h3>
+<ul>
+<li>Menor costo</li>
+<li>Menor estancia hospitalaria</li>
+<li>Mayor satisfacción</li>
+<li>Recuperación en domicilio</li>
+</ul>
+<h3>Frase para oral</h3>
+<div class="highlight">“La cirugía ambulatoria requiere una valoración enfermera exhaustiva, educación intensiva y seguimiento adecuado para garantizar seguridad y prevenir complicaciones en el domicilio.”</div>
+<div class="image-placeholder compact">
+  <img src="uni101.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 11 – EL SISTEMA CARDIOCIRCULATORIO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Guyton &amp; Hall: Tratado de Fisiología Médica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Henderson, V. La naturaleza de la enfermería; NANDA-NIC-NOC.</p>
+<h3>1️⃣ El corazón sano</h3>
+<p>Órgano muscular hueco que actúa como bomba impulsora de sangre, permitiendo que oxígeno y nutrientes lleguen a las células y que los desechos regresen para su eliminación.</p>
+<p><strong>Ubicación:</strong> Mediastino medio, entre ambos pulmones, detrás del esternón, 2/3 hacia el lado izquierdo.</p>
+<h3>2️⃣ Estructura del corazón</h3>
+<h4>Capas</h4>
+<ul>
+<li>Endocardio → capa interna</li>
+<li>Miocardio → músculo contráctil</li>
+<li>Pericardio → envoltura protectora</li>
+</ul>
+<p><strong>Epitelio cardíaco:</strong> endotelio simple plano que reduce fricción y permite flujo sanguíneo laminar.</p>
+<h4>Cavidades</h4>
+<ul>
+<li>Aurícula derecha</li>
+<li>Ventrículo derecho</li>
+<li>Aurícula izquierda</li>
+<li>Ventrículo izquierdo (pared más gruesa)</li>
+</ul>
+<h4>Válvulas</h4>
+<ul>
+<li>Tricúspide</li>
+<li>Mitral</li>
+<li>Pulmonar</li>
+<li>Aórtica</li>
+</ul>
+<p>Evitan reflujo y permiten flujo en un solo sentido.</p>
+<h3>3️⃣ Sistema circulatorio</h3>
+<p>Componentes: corazón, sangre, vasos sanguíneos.</p>
+<h4>Vasos sanguíneos</h4>
+<ul>
+<li>Arterias: llevan sangre desde el corazón.</li>
+<li>Venas: devuelven sangre al corazón, con válvulas.</li>
+<li>Capilares: intercambio de oxígeno, nutrientes, CO₂ y desechos.</li>
+</ul>
+<h3>4️⃣ Tipos de circulación</h3>
+<ul>
+<li><strong>Pulmonar:</strong> ventrículo derecho → pulmones → aurícula izquierda. Función: oxigenar la sangre.</li>
+<li><strong>Sistémica:</strong> ventrículo izquierdo → cuerpo → aurícula derecha. Función: distribuir oxígeno y nutrientes.</li>
+</ul>
+<h3>5️⃣ Sistema eléctrico cardíaco</h3>
+<ul>
+<li>Nodo sinusal (marcapasos fisiológico)</li>
+<li>Nodo auriculoventricular</li>
+<li>Haz de His</li>
+<li>Fibras de Purkinje</li>
+</ul>
+<p>Frecuencia normal adulto: 60–100 lpm.</p>
+<h3>6️⃣ Ciclo cardíaco</h3>
+<ul>
+<li><strong>Sístole:</strong> contracción → expulsa sangre.</li>
+<li><strong>Diástole:</strong> relajación → permite llenado.</li>
+</ul>
+<h3>7️⃣ Gasto cardíaco</h3>
+<p>Cantidad de sangre bombeada por minuto.</p>
+<p><strong>Fórmula:</strong> GC = Frecuencia cardíaca × Volumen sistólico.</p>
+<p>Normal adulto: 4–6 litros/minuto.</p>
+<h3>8️⃣ Mecanismos de regulación</h3>
+<p>El corazón se adapta según necesidad:</p>
+<ul>
+<li>Sistema nervioso autónomo</li>
+<li>Hormonas (adrenalina)</li>
+<li>Presión arterial</li>
+<li>Volumen sanguíneo</li>
+<li>Demanda metabólica</li>
+</ul>
+<p>Ejemplo: en ejercicio aumenta frecuencia y fuerza de contracción.</p>
+<h3>9️⃣ Cambios normales en el adulto mayor</h3>
+<ul>
+<li>Disminuye elasticidad vascular</li>
+<li>Mayor rigidez ventricular</li>
+<li>Menor respuesta a estímulos adrenérgicos</li>
+<li>Leve aumento presión sistólica</li>
+</ul>
+<div class="highlight">Estos cambios son fisiológicos y no patológicos.</div>
+<h3>Importancia de entender el corazón sano</h3>
+<p>Las patologías cardiovasculares alteran contractilidad, frecuencia, llenado, presión, flujo y perfusión.</p>
+<h3>Enfoque enfermero (paciente sano)</h3>
+<ul>
+<li>Frecuencia y ritmo cardíaco</li>
+<li>Presión arterial</li>
+<li>Perfusión periférica</li>
+<li>Coloración</li>
+<li>Temperatura</li>
+<li>Llenado capilar</li>
+<li>Pulsos</li>
+</ul>
+<div class="image-placeholder float-right compact">
+  <img src="uni111.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 12 – PRINCIPALES ALTERACIONES DEL SISTEMA CARDIOVASCULAR</h2>
+<p><strong>Referencia Bibliográfica:</strong> Guyton &amp; Hall: Tratado de Fisiología Médica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Henderson, V. La naturaleza de la enfermería; NANDA-NIC-NOC.</p>
+<h3>1. Hipertensión Arterial (HTA)</h3>
+<p><strong>Definición:</strong> TA ≥140/90 mmHg en consultorio o ≥130/80 mmHg ambulatorio.</p>
+<p><strong>Etiología:</strong> Primaria (90%, multifactorial), Secundaria (nefropatías, endocrinopatías, fármacos, apnea del sueño).</p>
+<p><strong>Fisiopatología:</strong> aumento resistencia vascular periférica → daño órganos blanco.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Controlar TA con técnica estandarizada</li>
+<li>Evaluar síntomas: cefalea, visión borrosa</li>
+<li>Monitorear adherencia farmacológica</li>
+<li>Educar sobre dieta baja en sodio y actividad física</li>
+<li>Detectar signos de alarma: dolor torácico, disnea</li>
+</ul>
+<h3>2. Insuficiencia Cardíaca (IC)</h3>
+<p><strong>Definición:</strong> corazón no bombea suficiente sangre.</p>
+<p><strong>Etiología:</strong> HTA, cardiopatía isquémica, valvulopatías.</p>
+<p><strong>Fisiopatología:</strong> ↓ GC → activación neurohormonal → retención sodio/agua → congestión.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Balance hídrico estricto</li>
+<li>Pesaje diario</li>
+<li>Monitoreo de disnea y edemas</li>
+<li>Favorecer reposo en semifowler</li>
+<li>Educación sobre restricción de líquidos</li>
+</ul>
+<h3>3. Angina de Pecho</h3>
+<p><strong>Definición:</strong> dolor torácico transitorio por isquemia sin necrosis.</p>
+<p><strong>Etiología:</strong> aterosclerosis coronaria, anemia, espasmo coronario.</p>
+<p><strong>Fisiopatología:</strong> desequilibrio oferta/demanda O₂ → dolor opresivo.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Evaluar dolor</li>
+<li>Administrar nitroglicerina sublingual</li>
+<li>Controlar TA y FC</li>
+<li>Mantener reposo</li>
+<li>Iniciar protocolo IAM si no cede</li>
+</ul>
+<h3>4. Infarto Agudo de Miocardio (IAM)</h3>
+<p><strong>Definición:</strong> necrosis miocárdica por obstrucción coronaria prolongada.</p>
+<p><strong>Etiología:</strong> ruptura de placa aterosclerótica y trombosis.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Aplicar protocolo MONA</li>
+<li>ECG en primeros 10 minutos</li>
+<li>Canalización venosa + control TA/FC</li>
+<li>Vigilar shock o arritmias</li>
+<li>Preparar para reperfusión</li>
+</ul>
+<h3>5. Insuficiencia Venosa y Arterial</h3>
+<p><strong>Definición:</strong> alteración del retorno venoso o flujo arterial.</p>
+<p><strong>Etiología:</strong> venosa (incompetencia valvular), arterial (aterosclerosis, diabetes).</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Inspección piel y pulsos</li>
+<li>Elevar piernas (venosa)</li>
+<li>Fomentar caminatas controladas (arterial)</li>
+<li>Control de heridas y curaciones</li>
+</ul>
+<h3>6. Amputación de Miembros Inferiores</h3>
+<p><strong>Definición:</strong> pérdida quirúrgica de extremidad.</p>
+<p><strong>Etiología:</strong> isquemia crítica, diabetes, trauma.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Control del dolor (incluyendo fantasma)</li>
+<li>Vigilar muñón</li>
+<li>Prevenir infecciones</li>
+<li>Movilización precoz</li>
+<li>Apoyo emocional y preparación para prótesis</li>
+</ul>
+<div class="image-placeholder float-left compact">
+  <img src="uni121.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 13 – ECG ELECTROCARDIOGRAMA</h2>
+<h3>¿Qué es un Electrocardiograma?</h3>
+<p>El ECG es un registro gráfico de la actividad eléctrica del corazón, obtenido mediante electrodos colocados en la superficie corporal. Permite evaluar el ritmo, la conducción y posibles alteraciones cardíacas.</p>
+<h3>⭐ Objetivos del ECG</h3>
+<ul>
+<li>Detectar arritmias</li>
+<li>Identificar isquemia o infarto agudo de miocardio (IAM)</li>
+<li>Evaluar trastornos de la conducción eléctrica</li>
+<li>Controlar efectos de fármacos (digoxina, antiarrítmicos)</li>
+<li>Diagnosticar trastornos electrolíticos</li>
+<li>Monitorizar pacientes críticos o postoperatorios</li>
+</ul>
+<h3>⭐ Ondas y Segmentos del ECG</h3>
+<h3 class="table-subtitle">Ondas y segmentos del ECG</h3>
+<div class="ecg-table-wrap">
+<table class="ecg-table">
+<thead>
+<tr>
+<th>Onda / Segmento</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Onda P</td>
+<td class="right">Despolarización auricular.</td>
+</tr>
+<tr>
+<td class="left">Intervalo PR</td>
+<td class="right">Conducción aurícula–nódulo AV–ventrículos.</td>
+</tr>
+<tr>
+<td class="left">Complejo QRS</td>
+<td class="right">Despolarización ventricular.</td>
+</tr>
+<tr>
+<td class="left">Segmento ST</td>
+<td class="right">Fase inicial de repolarización ventricular (clave en isquemia e IAM).</td>
+</tr>
+<tr>
+<td class="left">Onda T</td>
+<td class="right">Repolarización ventricular.</td>
+</tr>
+<tr>
+<td class="left">Onda U</td>
+<td class="right">Puede verse en hipopotasemia.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>⭐ Derivaciones del ECG (12 derivaciones)</h3>
+<ul>
+<li><strong>Plan frontal:</strong> Bipolares (I, II, III), Unipolares (aVR, aVL, aVF)</li>
+<li><strong>Plan horizontal:</strong> Precordiales V1–V6</li>
+</ul>
+<p>Cada grupo observa distintas paredes del corazón (importante en IAM).</p>
+<h3>⭐ Interpretación Básica para Enfermería</h3>
+<ul>
+<li>Verificar calibración (10 mm = 1 mV; 25 mm/s)</li>
+<li>Frecuencia cardíaca: taquicardia &gt;100 lpm, bradicardia &lt;60 lpm</li>
+<li>Ritmo sinusal: onda P positiva en II y V1, regular</li>
+<li>Intervalos: PR 0,12–0,20 s; QRS &lt;0,12 s; QT corregido</li>
+<li>Eje cardíaco</li>
+<li>Segmento ST y onda T (isquemia, lesión, necrosis)</li>
+<li>Hallazgos patológicos: bloqueos, arritmias, hipertrofias</li>
+</ul>
+<h3>⭐ Alteraciones frecuentes en el ECG</h3>
+<h4>1. IAM / Isquemia</h4>
+<ul>
+<li>ST ↑ → lesión aguda</li>
+<li>ST ↓ → isquemia subendocárdica</li>
+<li>Onda Q patológica → necrosis</li>
+</ul>
+<h4>2. Arritmias</h4>
+<ul>
+<li>FA: ritmo irregular sin onda P</li>
+<li>Flutter: ondas en “serrucho”</li>
+<li>Taquicardia supraventricular: QRS angosto y rápido</li>
+<li>Taquicardia ventricular: QRS ancho, potencialmente mortal</li>
+<li>Bloqueos AV: PR prolongado o disociación AV</li>
+</ul>
+<h4>3. Trastornos electrolíticos</h4>
+<ul>
+<li>Hipopotasemia: onda U prominente</li>
+<li>Hiperpotasemia: ondas T picudas, QRS ancho</li>
+<li>Hipocalcemia: QT prolongado</li>
+<li>Hipercalcemia: QT corto</li>
+</ul>
+<h3>⭐ Acciones de Enfermería Relacionadas con ECG</h3>
+<ul>
+<li>Preparar piel: limpiar, rasurar si es necesario</li>
+<li>Colocar electrodos correctamente</li>
+<li>Verificar conexión y artefactos</li>
+<li>Identificar ritmos potencialmente letales</li>
+<li>Registrar cambios significativos y avisar de inmediato</li>
+<li>Monitorizar síntomas: dolor torácico, disnea, diaforesis</li>
+<li>Garantizar privacidad y explicar procedimiento</li>
+<li>Documentar y comparar con ECG previos</li>
+</ul>
+<h3>⭐ Importancia en la práctica profesional</h3>
+<p>El ECG es una herramienta fundamental en urgencias, internación, UTI, cirugía y atención primaria. Permite a Enfermería realizar valoración rápida, detectar descompensaciones y colaborar en decisiones clínicas.</p>
+<div class="image-placeholder bg-slot">
+  <img src="uni131.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 14 – ANATOMOFISIOLOGÍA DEL SISTEMA RESPIRATORIO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Guyton &amp; Hall: Tratado de Fisiología Médica; Snell, R. Neuroanatomía Clínica; Netter, F. Atlas de Anatomía Humana; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; NANDA-NIC-NOC.</p>
+<h3>Pulmón – Resumen breve</h3>
+<h4>Definición</h4>
+<p>Los pulmones son órganos esenciales del sistema respiratorio responsables del intercambio gaseoso entre el aire y la sangre.</p>
+<h4>Función</h4>
+<ul>
+<li>Oxigenar la sangre</li>
+<li>Eliminar dióxido de carbono (CO₂)</li>
+<li>Participar en el equilibrio ácido-base</li>
+<li>Filtrar partículas pequeñas</li>
+<li>Defensa inmunológica</li>
+</ul>
+<h4>Ubicación</h4>
+<p>Situados en el tórax, dentro de la cavidad pleural, a ambos lados del mediastino. El pulmón derecho tiene tres lóbulos y el izquierdo dos.</p>
+<h4>Composición</h4>
+<ul>
+<li>Bronquios, bronquiolos y alvéolos</li>
+<li>Vasos pulmonares (arteria pulmonar, venas pulmonares, capilares)</li>
+<li>Tejido elástico y conectivo</li>
+<li>Pleuras: visceral y parietal</li>
+</ul>
+<h3>Red nerviosa y control de la respiración</h3>
+<ul>
+<li>Sistema nervioso autónomo: simpático (broncodilatación), parasimpático (broncoconstricción)</li>
+<li>Nervio frénico: controla el diafragma</li>
+<li>Nervios intercostales: controlan músculos intercostales</li>
+<li>Centro respiratorio bulbo-protuberancial: regula ritmo y profundidad</li>
+</ul>
+<h3>Epitelio respiratorio</h3>
+<h4>Vías aéreas superiores (tráquea y bronquios)</h4>
+<p>Epitelio cilíndrico pseudoestratificado ciliado con células caliciformes que producen moco.</p>
+<ul>
+<li>Filtrar, humidificar y calentar el aire</li>
+<li>Cilios movilizan el moco hacia afuera</li>
+</ul>
+<h4>Bronquiolos</h4>
+<p>Epitelio simple cúbico ciliado con células de Clara/club.</p>
+<ul>
+<li>Desintoxicar</li>
+<li>Secretar sustancias protectoras</li>
+<li>Mantener abiertos los bronquiolos</li>
+</ul>
+<h4>Alvéolos</h4>
+<p>Epitelio simple plano formado por:</p>
+<ul>
+<li><strong>Neumocitos tipo I:</strong> permiten intercambio gaseoso</li>
+<li><strong>Neumocitos tipo II:</strong> producen surfactante para evitar colapso alveolar</li>
+</ul>
+<div class="image-placeholder wide">
+  <img src="uni141.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 15 – PAE EN PROBLEMAS COMUNES DE OXIGENACIÓN</h2>
+<p><strong>Referencia Bibliográfica:</strong> WHO; IDSA; GOLD; Guyton &amp; Hall: Tratado de Fisiología Médica; Smeltzer &amp; Bare. Brunner y Suddarth: Enfermería Medicoquirúrgica; Henderson, V. La naturaleza de la enfermería; NANDA-NIC-NOC.</p>
+<h3>1️⃣ Rinitis (alérgica / no alérgica)</h3>
+<p><strong>Definición:</strong> Inflamación de la mucosa nasal por causas alérgicas, infecciosas o irritativas.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Valorar congestión y patrón de secreción</li>
+<li>Registrar antecedentes alergénicos</li>
+<li>Enseñar higiene nasal y medidas ambientales</li>
+</ul>
+<h4>Terapéutica</h4>
+<p>Antihistamínicos, corticoides intranasales; tratamiento sintomático en infecciosa.</p>
+<h3>2️⃣ Sinusitis (aguda / crónica)</h3>
+<p><strong>Definición:</strong> Inflamación/infección de senos paranasales, viral o bacteriana.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Valorar dolor facial, descarga nasal, fiebre</li>
+<li>Enseñar irrigaciones nasales salinas</li>
+</ul>
+<h4>Terapéutica</h4>
+<p>Analgésicos, descongestivos, antibióticos si bacteriana.</p>
+<h3>3️⃣ Influenza</h3>
+<p><strong>Definición:</strong> Infección respiratoria viral por influenza A/B.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Aislamiento respiratorio</li>
+<li>Valoración rápida de signos de gravedad</li>
+<li>Promover vacunación estacional</li>
+</ul>
+<h4>Terapéutica</h4>
+<p>Antivirales (oseltamivir), soporte con O₂ y líquidos.</p>
+<h3>4️⃣ Neumonía</h3>
+<p><strong>Definición:</strong> Infección del parénquima pulmonar por bacterias, virus u hongos.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Evaluación respiratoria (FR, SatO₂)</li>
+<li>Higiene bronquial y fisioterapia respiratoria</li>
+<li>Recolección de muestras antes de antibióticos</li>
+</ul>
+<h4>Terapéutica</h4>
+<p>Antibióticos empíricos, oxigenoterapia, líquidos y analgesia.</p>
+<h3>5️⃣ Tuberculosis (TB)</h3>
+<p><strong>Definición:</strong> Infección por Mycobacterium tuberculosis, contagiosa por vía aérea.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Detección de síntomas (tos ≥2 semanas)</li>
+<li>Aislamiento respiratorio</li>
+<li>Recolección de esputo</li>
+<li>Apoyo a la adherencia (DOT)</li>
+</ul>
+<h4>Terapéutica</h4>
+<p>Esquemas multiterápicos (isoniazida, rifampicina, pirazinamida, etambutol).</p>
+<h3>6️⃣ Pleuritis / Derrame pleural</h3>
+<p><strong>Definición:</strong> Inflamación pleural o acumulación de líquido.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Valorar dolor pleurítico</li>
+<li>Preparar y asistir en toracocentesis</li>
+<li>Monitorizar drenaje pleural</li>
+</ul>
+<h3>7️⃣ Enfermedades obstructivas (Asma, Bronquitis, EPOC)</h3>
+<p><strong>Definición:</strong> Asma: inflamación crónica reversible; EPOC: obstrucción persistente.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Evaluar patrón respiratorio y sibilancias</li>
+<li>Supervisar técnica de inhaladores</li>
+<li>Monitorizar SatO₂ y respuesta a broncodilatadores</li>
+</ul>
+<h3>8️⃣ Insuficiencia respiratoria crónica</h3>
+<p><strong>Definición:</strong> Incapacidad para mantener intercambio gaseoso (hipoxemia ± hipercapnia).</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Monitorizar SatO₂ y signos de hipercapnia</li>
+<li>Administrar oxígeno según prescripción</li>
+<li>Enseñar técnicas de conservación de energía</li>
+</ul>
+<h3>9️⃣ Enfermedades restrictivas</h3>
+<p><strong>Definición:</strong> Reducción de capacidad pulmonar total por fibrosis, pleurales o neuromusculares.</p>
+<h4>Acciones de Enfermería</h4>
+<ul>
+<li>Evaluación de FR y patrón restrictivo</li>
+<li>Fomentar rehabilitación y soporte psicosocial</li>
+</ul>
+<h3>Acciones transversales de Enfermería</h3>
+<ul>
+<li>Valoración continua (FR, SatO₂, auscultación)</li>
+<li>Soporte de vía aérea y oxigenoterapia</li>
+<li>Fisioterapia respiratoria</li>
+<li>Prevención de infecciones</li>
+<li>Registro y comunicación</li>
+<li>Soporte emocional y educación familiar</li>
+</ul>
+<h3>Notas de seguridad y control</h3>
+<ul>
+<li>Uso de antivirales/antibióticos según guías</li>
+<li>Oxígeno: objetivo SatO₂ individualizado</li>
+<li>Vacunación: influenza y neumococo</li>
+</ul>
+<h3>💙 Enfermedades respiratorias importantes no incluidas</h3>
+<ul>
+<li>EPOC</li>
+<li>Neumotórax</li>
+<li>Derrame pleural</li>
+<li>Fibrosis pulmonar</li>
+<li>Cáncer de pulmón</li>
+<li>Bronquiectasias</li>
+<li>Apnea del sueño</li>
+<li>SARS / COVID-19</li>
+</ul>
+<div class="image-placeholder compact">
+  <img src="uni151.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 16 – ANATOMOFISIOLOGÍA DEL SISTEMA DIGESTIVO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Henderson, V. Fundamentos de Enfermería; Potter, P. &amp; Perry, A. Fundamentos de Enfermería; Tortora, G. &amp; Derrickson, B. Principios de Anatomía y Fisiología; Latarjet, M. &amp; Ruiz Liard, A. Anatomía Humana; Guyton, A. &amp; Hall, J. Tratado de Fisiología Médica; Argente, H. &amp; Álvarez, M. Semiología Médica.</p>
+<h3>1️⃣ ¿Qué es el sistema digestivo?</h3>
+<p>Conjunto de órganos encargados de ingerir alimentos, transformarlos en nutrientes, absorber sustancias útiles y eliminar residuos. Su función principal es proporcionar energía y nutrientes al organismo.</p>
+<div class="highlight">👉 Transforma los alimentos en sustancias que el cuerpo puede utilizar.</div>
+<h3>2️⃣ Órganos que forman el sistema digestivo</h3>
+<h4>Tubo digestivo</h4>
+<ul>
+<li>Boca</li>
+<li>Faringe</li>
+<li>Esófago</li>
+<li>Estómago</li>
+<li>Intestino delgado</li>
+<li>Intestino grueso</li>
+<li>Recto</li>
+<li>Ano</li>
+</ul>
+<h4>Órganos accesorios</h4>
+<ul>
+<li>Glándulas salivales</li>
+<li>Hígado</li>
+<li>Vesícula biliar</li>
+<li>Páncreas</li>
+</ul>
+<h3>3️⃣ Funciones principales</h3>
+<ul>
+<li><strong>Ingestión:</strong> entrada de alimentos.</li>
+<li><strong>Digestión:</strong> mecánica (masticación, movimientos) y química (enzimas).</li>
+<li><strong>Absorción:</strong> paso de nutrientes al torrente sanguíneo, principalmente en intestino delgado.</li>
+<li><strong>Eliminación:</strong> expulsión de residuos en forma de heces.</li>
+</ul>
+<h3>4️⃣ Recorrido del alimento</h3>
+<h4>Boca</h4>
+<p>Masticación, mezcla con saliva, formación del bolo alimenticio.</p>
+<h4>Faringe</h4>
+<p>Conecta boca con esófago, permite paso del alimento.</p>
+<h4>Esófago</h4>
+<p>Transporte mediante peristaltismo.</p>
+<h4>Estómago</h4>
+<p>Almacena, mezcla con jugo gástrico, inicia digestión de proteínas. El bolo se transforma en quimo.</p>
+<h4>Intestino delgado</h4>
+<p>Principal lugar de digestión y absorción. Se divide en duodeno, yeyuno e íleon. Vellosidades aumentan superficie de absorción.</p>
+<h4>Intestino grueso</h4>
+<p>Absorción de agua, formación de heces, almacenamiento de residuos.</p>
+<h4>Recto y ano</h4>
+<p>Almacenan y eliminan heces.</p>
+<h3>5️⃣ Órganos accesorios</h3>
+<h4>Hígado</h4>
+<p>Órgano más grande. Produce bilis, metaboliza nutrientes, desintoxica sustancias, almacena glucógeno.</p>
+<h4>Vesícula biliar</h4>
+<p>Almacena bilis para digestión de grasas.</p>
+<h4>Páncreas</h4>
+<p>Función digestiva: enzimas para grasas, proteínas y carbohidratos. Función hormonal: insulina y glucagón.</p>
+<h3>6️⃣ Movimientos del sistema digestivo</h3>
+<ul>
+<li><strong>Peristaltismo:</strong> contracciones que empujan el alimento.</li>
+<li><strong>Segmentación:</strong> movimientos que mezclan el contenido intestinal.</li>
+</ul>
+<h3>7️⃣ Importancia para enfermería</h3>
+<p>El sistema digestivo es clave porque muchas enfermedades afectan su funcionamiento. El personal de enfermería debe vigilar:</p>
+<ul>
+<li>Tolerancia a la alimentación</li>
+<li>Náuseas o vómitos</li>
+<li>Distensión abdominal</li>
+<li>Eliminación intestinal</li>
+<li>Características de las heces</li>
+</ul>
+<h3>Control nervioso y motilidad (“Red eléctrica”)</h3>
+<p>El sistema digestivo cuenta con el <strong>Sistema Nervioso Entérico (SNE)</strong>, formado por:</p>
+<ul>
+<li><strong>Plexo mientérico (Auerbach):</strong> controla movimiento del tubo digestivo.</li>
+<li><strong>Plexo submucoso (Meissner):</strong> regula secreciones y flujo sanguíneo.</li>
+</ul>
+<p>Trabaja junto con el sistema nervioso autónomo, especialmente el parasimpático, que estimula la digestión.</p>
+<div class="image-placeholder float-right compact">
+  <img src="uni161.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 17 – PAE EN PROBLEMAS DIGESTIVOS</h2>
+<p><strong>Referencia Bibliográfica:</strong> Henderson, V. Fundamentos de Enfermería; Potter, P. &amp; Perry, A. Fundamentos de Enfermería; NANDA-NIC-NOC; Moorhead, S. et al. Nursing Outcomes Classification (NOC); Bulechek, G. et al. Nursing Interventions Classification (NIC); Tortora, G. &amp; Derrickson, B. Principios de Anatomía y Fisiología; Guyton &amp; Hall: Tratado de Fisiología Médica; Argente, H. &amp; Álvarez, M. Semiología Médica.</p>
+<h3>1️⃣ Gastritis</h3>
+<p><strong>Definición:</strong> Inflamación de la mucosa gástrica.</p>
+<p><strong>Etiología:</strong> H. pylori, AINES, alcohol, estrés.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar dolor epigástrico, náuseas, sangrado; educar sobre fármacos irritantes.</p>
+<p><strong>Terapéutica:</strong> IPP, erradicación H. pylori, suspensión de AINES.</p>
+<h3>2️⃣ Úlcera gástrica / duodenal</h3>
+<p><strong>Definición:</strong> lesión ulcerada de mucosa gástrica o duodenal.</p>
+<p><strong>Etiología:</strong> H. pylori, AINES, estrés, tabaco.</p>
+<p><strong>Acciones de Enfermería:</strong> monitorizar dolor, sangrado digestivo; preparar endoscopía.</p>
+<p><strong>Terapéutica:</strong> IPP, erradicación H. pylori, endoscopia terapéutica si sangrado.</p>
+<h3>3️⃣ Hemorragia digestiva</h3>
+<p><strong>Definición:</strong> pérdida de sangre por tracto digestivo (alta o baja).</p>
+<p><strong>Etiología:</strong> úlceras, varices, divertículos, colitis.</p>
+<p><strong>Acciones de Enfermería:</strong> ABC, monitor hemodinámico, vías IV, preparar transfusión.</p>
+<p><strong>Terapéutica:</strong> reposición volémica, transfusión, endoscopia terapéutica.</p>
+<h3>4️⃣ Enfermedad inflamatoria intestinal (CU / Crohn)</h3>
+<p><strong>Definición:</strong> inflamación crónica intestinal.</p>
+<p><strong>Etiología:</strong> genética, inmunitaria, ambiental.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar diarrea, sangre, dolor; apoyo psicosocial.</p>
+<p><strong>Terapéutica:</strong> aminosalicilatos, corticoides, inmunomoduladores, biológicos.</p>
+<h3>5️⃣ Síndrome de intestino irritable</h3>
+<p><strong>Definición:</strong> trastorno funcional intestinal sin daño estructural.</p>
+<p><strong>Etiología:</strong> sensibilidad visceral, motilidad alterada, factores psicosociales.</p>
+<p><strong>Acciones de Enfermería:</strong> evaluar patrón intestinal, educar sobre dieta FODMAP.</p>
+<h3>6️⃣ Enfermedad diverticular</h3>
+<p><strong>Definición:</strong> divertículos colónicos; diverticulitis = inflamación.</p>
+<p><strong>Etiología:</strong> dieta baja en fibra, envejecimiento.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar dolor en FID, fiebre; preparar TAC.</p>
+<h3>7️⃣ Apendicitis aguda</h3>
+<p><strong>Definición:</strong> inflamación aguda del apéndice.</p>
+<p><strong>Etiología:</strong> obstrucción luminal.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar dolor migratorio, fiebre; NPO, preparar cirugía.</p>
+<h3>8️⃣ Patologías anorrectales (hemorroides, fisura, fístulas)</h3>
+<p><strong>Definición:</strong> patologías frecuentes asociadas al esfuerzo defecatorio.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar dolor, sangrado; higiene local; instruir en fibra y ablandadores.</p>
+<h3>9️⃣ Hepatitis y hepatopatías</h3>
+<p><strong>Definición:</strong> inflamación hepática por virus, alcohol, drogas.</p>
+<p><strong>Acciones de Enfermería:</strong> detección de ictericia, pruebas hepáticas, educación sobre aislamiento.</p>
+<p><strong>Terapéutica:</strong> antivirales, evitar hepatotóxicos.</p>
+<h3>🔟 Cirrosis hepática</h3>
+<p><strong>Definición:</strong> estadio avanzado de fibrosis hepática.</p>
+<p><strong>Etiología:</strong> virus B/C, alcohol, NAFLD.</p>
+<p><strong>Acciones de Enfermería:</strong> monitorizar ascitis, sangrado variceal, encefalopatía.</p>
+<h3>1️⃣1️⃣ Colelitiasis y colecistitis</h3>
+<p><strong>Definición:</strong> cálculos vesiculares; inflamación vesicular.</p>
+<p><strong>Etiología:</strong> obesidad, sexo femenino, edad.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar dolor en hipocondrio derecho, fiebre, ictericia; preparar ecografía.</p>
+<h3>Enfermedades gastrointestinales importantes no incluidas</h3>
+<ul>
+<li>ERGE</li>
+<li>Dispepsia funcional</li>
+<li>Hernia hiatal</li>
+<li>Gastritis erosiva por estrés</li>
+<li>Cáncer gástrico</li>
+<li>Gastroparesia</li>
+</ul>
+<div class="image-placeholder float-left compact">
+  <img src="uni171.png" alt="">
+</div>
+</section>
+<section class="unidad">
+<h2>UNIDAD Nº 19 – PAE PROBLEMAS DEL SISTEMA ENDOCRINO</h2>
+<p><strong>Referencia Bibliográfica:</strong> Henderson, V. Fundamentos de Enfermería; Potter, P. &amp; Perry, A. Fundamentos de Enfermería; NANDA-NIC-NOC; Moorhead, S. et al. Nursing Outcomes Classification (NOC); Bulechek, G. et al. Nursing Interventions Classification (NIC); Tortora, G. &amp; Derrickson, B. Principios de Anatomía y Fisiología; Guyton &amp; Hall: Tratado de Fisiología Médica; Argente, H. &amp; Álvarez, M. Semiología Médica.</p>
+<h3>1️⃣ Diabetes insípida (DI)</h3>
+<p><strong>Definición:</strong> Síndrome de poliuria-polidipsia por déficit o resistencia a ADH.</p>
+<p><strong>Etiología:</strong> Central (trauma, tumores), Nefrogénica (litio, enfermedad renal).</p>
+<p><strong>Acciones de Enfermería:</strong> medir diuresis, peso, signos de deshidratación.</p>
+<p><strong>Terapéutica:</strong> Desmopresina en DI central; restricción de sal y diuréticos en nefrogénica.</p>
+<h3>2️⃣ Hipotiroidismo</h3>
+<p><strong>Definición:</strong> Producción insuficiente de T4/T3.</p>
+<p><strong>Etiología:</strong> Tiroiditis de Hashimoto, cirugía, déficit de yodo.</p>
+<p><strong>Acciones de Enfermería:</strong> valorar signos vitales, intolerancia al frío, estreñimiento.</p>
+<p><strong>Terapéutica:</strong> Levotiroxina oral.</p>
+<h3>3️⃣ Hipertiroidismo</h3>
+<p><strong>Definición:</strong> Exceso de hormonas tiroideas circulantes.</p>
+<p><strong>Etiología:</strong> Graves, bocio multinodular tóxico.</p>
+<p><strong>Acciones de Enfermería:</strong> monitorizar FC, TA, temperatura; vigilar ansiedad.</p>
+<p><strong>Terapéutica:</strong> Antitiroideos, beta-bloqueantes, cirugía según caso.</p>
+<h3>4️⃣ Síndrome de Cushing</h3>
+<p><strong>Definición:</strong> Exceso de cortisol endógeno o exógeno.</p>
+<p><strong>Etiología:</strong> adenoma hipofisario, suprarrenal, uso de glucocorticoides.</p>
+<p><strong>Acciones de Enfermería:</strong> identificar complicaciones (hiperglucemia, HTA, infecciones).</p>
+<p><strong>Terapéutica:</strong> cirugía del tumor, inhibidores de esteroidogénesis.</p>
+<h3>5️⃣ Diabetes mellitus (Tipos 1–5)</h3>
+<p><strong>Definición:</strong> Hiperglucemia crónica por defectos en secreción o acción de insulina.</p>
+<h4>Tipo 1</h4>
+<p>Autoinmune, déficit absoluto de insulina. Terapéutica: insulina exógena.</p>
+<h4>Tipo 2</h4>
+<p>Resistencia a insulina + disfunción beta. Terapéutica: cambios de estilo de vida + fármacos orales/injectables.</p>
+<h4>Otros tipos</h4>
+<p>Tipo 3c pancreatogénica; clusters modernos con 5 subgrupos para manejo individualizado.</p>
+<h3>⭐ Enfermedades metabólicas comunes (no incluidas)</h3>
+<h4>Dislipidemias</h4>
+<p>Alteración del metabolismo lipídico → riesgo cardiovascular.</p>
+<h4>Síndrome metabólico</h4>
+<p>Obesidad abdominal + HTA + hiperglucemia + dislipidemia.</p>
+<h4>Gota</h4>
+<p>Depósito de cristales de ácido úrico en articulaciones.</p>
+<h4>Obesidad</h4>
+<p>IMC &gt;30, enfermedad crónica multifactorial.</p>
+<h4>Hiperparatiroidismo</h4>
+<p>Exceso de PTH → hipercalcemia.</p>
+<h4>Enfermedad de Addison</h4>
+<p>Déficit de cortisol y aldosterona.</p>
+<h4>Hipoglucemia no diabética</h4>
+<p>Glucosa &lt;70 mg/dL en personas sin diabetes.</p>
+<div class="image-placeholder bg-slot">
+  <img src="uni191.png" alt="">
+</div>
+</section>
+</body>
+</html>
